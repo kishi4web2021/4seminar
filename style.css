@@ -15,7 +15,6 @@ h1 {
 *:after {
   -webkit-box-sizing: inherit;
   box-sizing: inherit;
-  text-align: center;
 }
 
 html {
@@ -46,6 +45,7 @@ button.btn {
   letter-spacing: 0.1em;
   color: #212529;
   border-radius: 0.5rem;
+  text-align: center;
 }
 
 a.btn--circle {
