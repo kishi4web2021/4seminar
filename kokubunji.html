@@ -3,25 +3,16 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css" >
-    <title>kokubunji</title>
+    <title>国分寺</title>
   </head>
   <body>
     <center>
       <h1>国分寺駅周辺</h1>
       <div id="map" style="width:620px; height:400px"></div>
 
-      <script type="text/javascript">
-      function initMap() {
-        var opts = {
-          zoom: 15,
-          center: new google.maps.LatLng(35.70091994810423,139.48169230841705)
-        };
-        var map = new google.maps.Map(document.getElementById("map"), opts);
-      }
-      </script>
-
-      <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiV2ZbFIYuD3N4hzGLstSn2e4ZG5A7QlU&callback=initMap">
+      <script type="text/javascript" src="./kokubunji_map.js"></script>
+        
+      <script src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyAiV2ZbFIYuD3N4hzGLstSn2e4ZG5A7QlU&callback=initMap&libraries=places" async defer></script>
       </script>
      <center>
   </body>
