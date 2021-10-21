@@ -1,81 +1,51 @@
-body {
-  /* margin: 0;
-  width: 3456px;
-  height: 2304px; */
-  background-image:./3388477_l.jpg;
+body{
+    background: #81bcd8;
 }
-h2 {
-  color: #000000;
+.site-header{
+    background: #fff;
+    display: flex;
+    padding: 60px 20px;
+    position: fixed;
+    justify-content: space-between;
+    width: 100%;
 }
-h1 {
-  color: #000000;
+.site-logo img{
+    height: 20px;
+    width: auto;
 }
-@import
-  "https://use.fontawesome.com/releases/v5.13.0/css/all.css";
-
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: inherit;
-  box-sizing: inherit;
-  /* text-align: center; */
+.gnav__menu{
+    display: flex;
 }
-
-html {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  font-size: 62.5%;
+.gnav__menu__item{
+    margin-left: 20px;
 }
-
-.btn,
-a.btn,
-button.btn {
-  font-size: 1.6rem;
-  font-weight: 700;
-  line-height: 1.5;
-  position: relative;
-  display: inline-block;
-  padding: 1rem 4rem;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  text-align: center;
-  vertical-align: middle;
-  text-decoration: none;
-  letter-spacing: 0.1em;
-  color: #212529;
-  border-radius: 0.5rem;
+.gnav__menu__item a{
+    color: #333;
+    text-decoration: none;
 }
-
-a.btn--circle {
-  width: 140px;
-  height: 140px;
-  padding: 20px 0 0;
-  border-radius: 50%;
-  color: #fff;
-  background: #eb6877;
-  -webkit-box-shadow: 0 7px 0 #e53b4e;
-  box-shadow: 0 7px 0 #e53b4e;
+.hero{
+    max-height: 500px;
+    overflow: hidden;
 }
-
-a.btn--circle i {
-  font-size: 150%;
+.hero img{
+    height: auto;
+    width: 100%;
 }
-
-.fa-position-bottom {
-  position: absolute;
-  bottom: 1rem;
-  left: calc(50% - 0.5rem);
+.content{
+    line-height: 1.6;
+    margin: 0 auto;
+    padding-top: 100px;
+    width: 800px;
 }
-
-a.btn--circle:hover {
-  -webkit-transform: translate(0, 4px);
-  transform: translate(0, 4px);
-  color: #fff;
-  -webkit-box-shadow: 0 3px 0 #e53b4e;
-  box-shadow: 0 3px 0 #e53b4e;
+.content p{
+    margin-bottom: 40px;
+}
+.site-footer{
+    background: #333;
+    padding: 80px 0;
+}
+.copyright{
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
 }
