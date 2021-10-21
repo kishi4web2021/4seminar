@@ -1,5 +1,10 @@
 body {
-  background-color: #ba2636;
+  body {
+  margin: 0;
+  width: 3456px;
+  height: 2304px;
+  background-image:url("https://github.com/Haruo-es/4seminar/edit/main/");
+}
 }
 h2 {
   color: #ffffff;
