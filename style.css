@@ -1,14 +1,14 @@
-body {
-  margin: 0;
-  width: 3456px;
-  height: 2304px;
-  background-image:url("https://github.com/Haruo-es/4seminar/blob/main/3388477_l.jpg");
-}
+*/body {
+*/  margin: 0;
+*/  width: 3456px;
+*/  height: 2304px;
+*/  background-image:url("https://github.com/Haruo-es/4seminar/blob/main/3388477_l.jpg");
+*/}
 h2 {
-  color: #ffffff;
+  color: #000000;
 }
 h1 {
-  color: #ffffff;
+  color: #000000;
 }
 @import
   "https://use.fontawesome.com/releases/v5.13.0/css/all.css";
