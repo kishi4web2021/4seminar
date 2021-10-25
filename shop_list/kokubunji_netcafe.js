@@ -2,7 +2,7 @@
 
 //  ２
 
-{
+kokubunji_netcafe = {
    "html_attributions" : [],
    "results" : [
       {

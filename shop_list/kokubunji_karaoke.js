@@ -2,7 +2,7 @@
 
 //　３
 
-{
+kokubunji_karaoke = {
    "html_attributions" : [],
    "results" : [
       {

@@ -2,7 +2,7 @@
 
 //　４
 
-{
+kokubunji_famires = {
    "html_attributions" : [],
    "results" : [
       {

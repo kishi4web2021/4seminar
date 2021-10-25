@@ -3,7 +3,7 @@
 // 6
 
 
-{
+shinjuku_hamburger = {
    "html_attributions" : [],
    "results" : [
       {

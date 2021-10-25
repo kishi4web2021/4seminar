@@ -3,7 +3,7 @@
 //　３
 
 
-{
+kodaira_karaoke = {
    "html_attributions" : [],
    "results" : [
       {
