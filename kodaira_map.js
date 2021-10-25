@@ -3,7 +3,7 @@ function initMap() {
   var latlng = {lat: 35.7217636, lng: 139.4667473};  //小平キャンパスの緯度経度
   var map = new google.maps.Map(document.getElementById('map'), {
     center: latlng,
-    zoom: 15
+    zoom: 14
   });
     
   var infowindow = new google.maps.InfoWindow();
@@ -23,6 +23,11 @@ function initMap() {
   
   service.nearbySearch(request1, callback); //カラオケ
   service.nearbySearch(request2, callback); //ネットカフェ
+
+  // カフェ
+  for (let i=0; i<kodaira_cafe.results.length; i++) { 
+    createMarker(kodaira_cafe.results[i]);
+  }
   
   function callback(results, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
