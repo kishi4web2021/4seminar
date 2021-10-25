@@ -23,6 +23,11 @@ function initMap() {
   
   service.nearbySearch(request1, callback); //カラオケ
   service.nearbySearch(request2, callback); //ネットカフェ
+
+  // カフェ
+  for (let i=0; i<kokubunji_cafe.results.length; i++) { 
+    createMarker(kokubunji_cafe.results[i]);
+  }
   
   function callback(results, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
