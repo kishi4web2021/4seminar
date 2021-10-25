@@ -2,7 +2,7 @@
 
 //　8
 
-{
+shinjuku_netcafe = {
    "html_attributions" : [],
    "results" : [
       {
