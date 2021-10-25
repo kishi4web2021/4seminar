@@ -2,7 +2,7 @@
 
 //　1
 
-{
+kodaira_netcafe = {
    "html_attributions" : [],
    "results" : [
       {
