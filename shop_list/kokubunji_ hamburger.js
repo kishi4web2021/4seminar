@@ -2,7 +2,7 @@
 
 //　２
 
-{
+kokubunji_hamburger = {
    "html_attributions" : [],
    "results" : [
       {
