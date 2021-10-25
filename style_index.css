@@ -2,7 +2,7 @@ body{
     background: #81bcd8;
 }
 .site-header{
-    background: #fff;
+    background: #ffffff;
     display: flex;
     padding: 60px 20px;
     position: fixed;
@@ -19,11 +19,11 @@ body{
     color: #333;
     text-decoration: none;
 }
-.hero{
+.pc{
     max-height: 500px;
     overflow: hidden;
 }
-.hero img{
+.pc img{
     height: auto;
     width: 100%;
 }
