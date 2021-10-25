@@ -10,12 +10,46 @@
       <h1>新宿駅周辺</h1>
       <div id="map" style="width:620px; height:400px"></div>
 
-     <script type="text/javascript" src="./shinjuku_map.js"></script>
-     <script type="text/javascript" src="shop_list/shinjuku_cafe.js"></script>
+      <script type="text/javascript" src="./shinjuku_map.js"></script>
+      <script type="text/javascript" src="shop_list/shinjuku_cafe.js"></script>
         
-    <script src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyAiV2ZbFIYuD3N4hzGLstSn2e4ZG5A7QlU&callback=initMap&libraries=places" async defer></script>
+      <script src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyAiV2ZbFIYuD3N4hzGLstSn2e4ZG5A7QlU&callback=initMap&libraries=places" async defer></script>
       </script>
-     <center>
+    
+      <br><br>
+      <button onclick="location.href='kuchikomishinjuku.html'">周辺情報掲示板</button>
+    
+      <br><br>
+      <h3>絞り込み条件</h3>
+      <br> 
+      <p>コンセントの有無</p>
+      <label>
+      <input type="checkbox",name="search",value="konsento">コンセント有り
+      </label>
+    　　　　<p>現在地からの距離</p>
+      <label>
+      <input type="checkbox",name="search",value="100m">100M以内
+      <input type="checkbox",name="search",value="200m">200M以内
+      <input type="checkbox",name="search",value="300m">500M以内
+      </label>
+      <p>個室の有無</p>
+      <label>
+      <input type="checkbox",name="search",value="koshitsu">個室あり
+      </label>
+      <p>お店の種類</p>
+      <label>
+      <input type="checkbox",name="search",value="cafe">カフェ
+      <input type="checkbox",name="search",value="famires">ファミレス
+      <input type="checkbox",name="search",value="netcafe">ネットカフェ
+      <input type="checkbox",name="search",value="karaoke">カラオケ
+      </label>
+      <p>価格帯</p>
+      <label>
+      <input type="checkbox",name="search",value="1000">1000円以内
+      <input type="checkbox",name="search",value="2000">2000円以内
+      <input type="checkbox",name="search",value="3000">3000円以内
+      </label>
+    </center>
   </body>
 </html>
 
