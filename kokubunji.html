@@ -23,26 +23,27 @@
       <br><br>
       <button onclick="location.href='kuchikomikokibunji.html'">周辺情報掲示板</button>
     
+    </center>
+    <div align="center">
       <br><br>
       <h3>絞り込み条件</h3>
-      <br> 
       <p>コンセントの有無</p>
-      <label><input type="checkbox",name="konsento",value="konsento">コンセント有り</label>
-    　　　　<p>現在地からの距離</p>
-      <label><input type="checkbox",name="500m",value="300m">300M以内</label>
-      <label><input type="checkbox",name="1km",value="500m">500M以内</label>
-      <label><input type="checkbox",name="2km",value="1km">1KM以内</label>
+      <input id="sample21" value="1" type="checkbox" onclick="konsento1();" checked><label for="sample21">コンセント有り</label>
+      <p>現在地からの距離</p>
+      <input id="sample22" value="1" type="checkbox" onclick="k300m();" checked><label for="sample22">500M以内</label>
+      <input id="sample23" value="1" type="checkbox" onclick="k500m();" checked><label for="sample23">1KM以内</label>
+      <input id="sample24" value="1" type="checkbox" onclick="k1km();" checked><label for="sample24">2KM以内</label>
       <p>個室の有無</p>
-      <label><input type="checkbox",name="koshitsu",value="koshitsu">個室あり</label>
+      <input id="sample25" value="1" type="checkbox" onclick="koshitsu1();" checked><label for="sample25">個室有り</label>
       <p>お店の種類</p>
-      <label><input type="checkbox",name="cafe",value="cafe">カフェ</label>
-      <label><input type="checkbox",name="famires",value="famires">ファミレス</label>
-      <label><input type="checkbox",name="netcafe",value="netcafe">ネットカフェ</label>
-      <label><input type="checkbox",name="karaoke",value="karaoke">カラオケ</label>
+      <input id="sample26" value="1" type="checkbox" onclick="cafe1();" checked><label for="sample26">カフェ</label>
+      <input id="sample27" value="1" type="checkbox" onclick="famires1();" checked><label for="sample27">ファミレス</label>
+      <input id="sample28" value="1" type="checkbox" onclick="netcafe1();" checked><label for="sample28">ネットカフェ</label>
+      <input id="sample29" value="1" type="checkbox" onclick="karaoke1();" checked><label for="sample29">カラオケ</label>
       <p>価格帯</p>
-      <label><input type="checkbox",name="1000",value="1000">1000円以内</label>
-      <label><input type="checkbox",name="2000",value="2000">2000円以内</label>
-      <label><input type="checkbox",name="3000",value="3000">3000円以内</label>
-    </center>
+      <input id="sample30" value="1" type="checkbox" onclick="level2();" checked><label for="sample30">普通</label>
+      <input id="sample31" value="1" type="checkbox" onclick="level3();" checked><label for="sample31">少し高め</label>
+      <input id="sample32" value="1" type="checkbox" onclick="others();" checked><label for="sample32">その他</label>
+    </div>
   </body>
 </html>
