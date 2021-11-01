@@ -1,5 +1,5 @@
 // cafe: 7, famires: 4, hamburger: 2, karaoke: 3, netcafe: 2
-// 19
+// 18
 
 kokubunji_data = {
     "html_attributions" : [],
