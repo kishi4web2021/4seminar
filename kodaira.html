@@ -28,7 +28,8 @@
       <br><br>
       <h3>絞り込み条件</h3>
       <br>
-      <input type="button" onClick="checkAll()" value="このボタンを押すと全選択されます">
+      <input type="button" onClick="checkAllBox(true)" value="このボタンを押すと全選択されます">
+      <input type="button" onClick="checkAllBox(false)" value="このボタンを押すと全解除されます">
       <br>
       <p>コンセントの有無</p>
       <input id="sample1" value="1" name="kodaira" type="checkbox" onclick="konsento1();" checked><label for="sample1">コンセントあり</label>
@@ -51,11 +52,11 @@
       <input id="sample14" value="1" name="kodaira" type="checkbox" onclick="others();" checked><label for="sample14">その他</label>
     </div>
     <script>
-        const checkbox1 = document.getElementsByName("kodaira")
+        const checkbox3 = document.getElementsByName("kodaira")
 
-        function checkAll() {
-          for(i = 0; i < checkbox1.length; i++) {
-            checkbox1[i].checked = true
+        function checkAllBox(trueOrFalse) {
+          for(i = 0; i < checkbox3.length; i++) {
+            checkbox3[i].checked = trueOrFalse
           }
         }
      </script>
