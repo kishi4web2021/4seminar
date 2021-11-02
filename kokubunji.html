@@ -27,25 +27,38 @@
     <div align="center">
       <br><br>
       <h3>絞り込み条件</h3>
+      <br>
+      <input type="button" onClick="checkAllBox(true)" value="このボタンを押すと全選択されます">
+      <input type="button" onClick="checkAllBox(false)" value="このボタンを押すと全解除されます">
+      <br>
       <p>コンセントの有無</p>
-      <input id="sample21" value="1" type="checkbox" onclick="konsento1();" checked><label for="sample21">コンセントあり</label>
-      <input id="sample22" value="1" type="checkbox" onclick="konsento2();" checked><label for="sample22">コンセントなし</label>
+      <input id="sample21" value="1" name="kokubunji" type="checkbox" onclick="konsento1();" checked><label for="sample21">コンセントあり</label>
+      <input id="sample22" value="1" name="kokubunji" type="checkbox" onclick="konsento2();" checked><label for="sample22">コンセントなし</label>
       <p>現在地からの距離</p>
-      <input id="sample23" value="1" type="checkbox" onclick="k300m();" checked><label for="sample23">300M以内</label>
-      <input id="sample24" value="1" type="checkbox" onclick="k500m();" checked><label for="sample24">500M以内</label>
-      <input id="sample25" value="1" type="checkbox" onclick="k1km();" checked><label for="sample25">1KM以内</label>
+      <input id="sample23" value="1" name="kokubunji" type="checkbox" onclick="k300m();" checked><label for="sample23">300M以内</label>
+      <input id="sample24" value="1" name="kokubunji" type="checkbox" onclick="k500m();" checked><label for="sample24">500M以内</label>
+      <input id="sample25" value="1" name="kokubunji" type="checkbox" onclick="k1km();" checked><label for="sample25">1KM以内</label>
       <p>個室の有無</p>
-      <input id="sample26" value="1" type="checkbox" onclick="koshitsu3();" checked><label for="sample26">個室あり</label>
-      <input id="sample27" value="1" type="checkbox" onclick="koshitsu4();" checked><label for="sample27">個室なし</label>
+      <input id="sample26" value="1" name="kokubunji" type="checkbox" onclick="koshitsu1();" checked><label for="sample26">個室あり</label>
+      <input id="sample27" value="1" name="kokubunji" type="checkbox" onclick="koshitsu2();" checked><label for="sample27">個室なし</label>
       <p>お店の種類</p>
-      <input id="sample28" value="1" type="checkbox" onclick="cafe2();" checked><label for="sample28">カフェ</label>
-      <input id="sample29" value="1" type="checkbox" onclick="famires2();" checked><label for="sample29">ファミレス</label>
-      <input id="sample30" value="1" type="checkbox" onclick="netcafe2();" checked><label for="sample30">ネットカフェ</label>
-      <input id="sample31" value="1" type="checkbox" onclick="karaoke2();" checked><label for="sample31">カラオケ</label>
+      <input id="sample28" value="1" name="kokubunji" type="checkbox" onclick="cafe2();" checked><label for="sample28">カフェ</label>
+      <input id="sample29" value="1" name="kokubunji" type="checkbox" onclick="famires2();" checked><label for="sample29">ファミレス</label>
+      <input id="sample30" value="1" name="kokubunji" type="checkbox" onclick="netcafe2();" checked><label for="sample30">ネットカフェ</label>
+      <input id="sample31" value="1" name="kokubunji" type="checkbox" onclick="karaoke2();" checked><label for="sample31">カラオケ</label>
       <p>価格帯</p>
-      <input id="sample32" value="1" type="checkbox" onclick="levelk2();" checked><label for="sample32">普通</label>
-      <input id="sample33" value="1" type="checkbox" onclick="levelk3();" checked><label for="sample33">少し高め</label>
-      <input id="sample34" value="1" type="checkbox" onclick="othersk();" checked><label for="sample34">その他</label>
+      <input id="sample32" value="1" name="kokubunji" type="checkbox" onclick="level2k();" checked><label for="sample32">普通</label>
+      <input id="sample33" value="1" name="kokubunji" type="checkbox" onclick="level3k();" checked><label for="sample33">少し高め</label>
+      <input id="sample34" value="1" name="kokubunji" type="checkbox" onclick="othersk();" checked><label for="sample34">その他</label>
     </div>
+    <script>
+        const checkbox3 = document.getElementsByName("kokubunji")
+
+        function checkAllBox(trueOrFalse) {
+          for(i = 0; i < checkbox3.length; i++) {
+            checkbox3[i].checked = trueOrFalse
+          }
+        }
+     </script>
   </body>
 </html>
