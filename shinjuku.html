@@ -13,9 +13,9 @@
       
       <h1>新宿駅周辺</h1>
       <div id="map" style="width:620px; height:400px"></div>
-      
-      <script type="text/javascript" src="shop_list/shinjuku_data.js"></script>
+
       <script type="text/javascript" src="./shinjuku_map.js"></script>
+      <script type="text/javascript" src="shop_list/shinjuku_cafe.js"></script>
         
       <script src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyAiV2ZbFIYuD3N4hzGLstSn2e4ZG5A7QlU&callback=initMap&libraries=places" async defer></script>
       </script>
@@ -41,10 +41,12 @@
       <input id="sample46" value="1" name="shinjuku" type="checkbox" onclick="koshitsu5();" checked><label for="sample46">個室あり</label>
       <input id="sample47" value="1" name="shinjuku" type="checkbox" onclick="koshitsu6();" checked><label for="sample47">個室なし</label>
       <p>お店の種類</p>
-      <input id="sample48" value="1" name="shinjuku" type="checkbox" onclick="cafe3();" checked><label for="sample48">カフェ</label>
-      <input id="sample49" value="1" name="shinjuku" type="checkbox" onclick="famires3();" checked><label for="sample49">ファミレス</label>
-      <input id="sample50" value="1" name="shinjuku" type="checkbox" onclick="netcafe3();" checked><label for="sample50">ネットカフェ</label>
-      <input id="sample51" value="1" name="shinjuku" type="checkbox" onclick="karaoke3();" checked><label for="sample51">カラオケ</label>
+      <input id="sample48" value="1" name="shinjuku" type="checkbox" onclick="cafe();" checked><label for="sample48">カフェ</label>
+      <input id="sample49" value="1" name="shinjuku" type="checkbox" onclick="famires();" checked><label for="sample49">ファミレス</label>
+      <input id="sample51" value="1" name="shinjuku" type="checkbox" onclick="hamburger();" checked><label for="sample51">カラオケ</label>
+      <input id="sample51" value="1" name="shinjuku" type="checkbox" onclick="karaoke();" checked><label for="sample51">カラオケ</label>
+      <input id="sample50" value="1" name="shinjuku" type="checkbox" onclick="netcafe();" checked><label for="sample50">ネットカフェ</label>
+      <input id="sample51" value="1" name="shinjuku" type="checkbox" onclick="karaoke();" checked><label for="sample51">カラオケ</label>
       <p>価格帯</p>
       <input id="sample52" value="1" name="shinjuku" type="checkbox" onclick="level2s();" checked><label for="sample52">普通</label>
       <input id="sample53" value="1" name="shinjuku" type="checkbox" onclick="level3s();" checked><label for="sample53">少し高め</label>
