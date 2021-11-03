@@ -104,9 +104,9 @@ function initMap() {
     zoom: 16
   });
   createData(shinjuku_data.results);
-  cafe(map);
-  famires(map);
-  hamburger(map); 
-  karaoke(map);
-  netcafe(map);
+  //cafe(map);
+  //famires(map);
+  //hamburger(map); 
+  //karaoke(map);
+  //netcafe(map);
 }
