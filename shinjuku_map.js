@@ -42,7 +42,7 @@ function createData(results) {
   */
 }
 
-function createMarker(map, i, place, markers) {
+function createMarker(i, place, markers) {
   var marker = new google.maps.Marker({
     position: { lat:place[i].lat, lng:place[i].lng },
     map: map,
@@ -66,33 +66,33 @@ function createMarker(map, i, place, markers) {
   });
 }
 
-function cafe(map) {
+function cafe() {
   for (var i=0; i<place_cafe.length; i++) {
-    createMarker(map, i, place_cafe, markers_cafe);
+    createMarker(i, place_cafe, markers_cafe);
   }
 }
 
-function famires(map) {
+function famires() {
   for (var i=0; i<place_famires.length; i++) {
-    createMarker(map, i, place_famires, markers_famires);
+    createMarker(i, place_famires, markers_famires);
   }
 }
 
-function hamburger(map) {
+function hamburger() {
   for (var i=0; i<place_hamburger.length; i++) {
-    createMarker(map, i, place_hamburger, markers_hamburger);
+    createMarker(i, place_hamburger, markers_hamburger);
   }
 }
 
-function karaoke(map) {
+function karaoke() {
   for (var i=0; i<place_karaoke.length; i++) {
-    createMarker(map, i, place_karaoke, markers_karaoke);
+    createMarker(i, place_karaoke, markers_karaoke);
   }
 }
 
-function netcafe(map) {
+function netcafe() {
   for (var i=0; i<place_netcafe.length; i++) {
-    createMarker(map, i, place_netcafe, markers_netcafe);
+    createMarker(i, place_netcafe, markers_netcafe);
   }
 }
 
@@ -104,9 +104,9 @@ function initMap() {
     zoom: 16
   });
   createData(shinjuku_data.results);
-  //cafe(map);
-  //famires(map);
-  //hamburger(map); 
-  //karaoke(map);
-  //netcafe(map);
+  //cafe();
+  //famires();
+  //hamburger(); 
+  //karaoke();
+  //netcafe();
 }
