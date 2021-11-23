@@ -40,8 +40,9 @@
       <input type="button" onClick="checkAllBox(true)" value="このボタンを押すと全選択されます">
       <input type="button" onClick="checkAllBox(false)" value="このボタンを押すと全解除されます">
       <br>
+      <form action="">
       <p>コンセントの有無</p>
-      <input id="sample41" value="1" name="shinjuku" type="checkbox" onclick="konsento5();" checked><label for="sample41">コンセントあり</label>
+      <input id="sample41" value="1" name="shinjuku" type="checkbox" checked><label for="sample41">コンセントあり</label>
       <input id="sample42" value="1" name="shinjuku" type="checkbox" onclick="konsento6();" checked><label for="sample42">コンセントなし</label>
       <p>現在地からの距離</p>
       <input id="sample43" value="1" name="shinjuku" type="checkbox" onclick="s100m();" checked><label for="sample43">100M以内</label>
@@ -60,6 +61,7 @@
       <input id="sample52" value="1" name="shinjuku" type="checkbox" onclick="level2s();" checked><label for="sample52">普通</label>
       <input id="sample53" value="1" name="shinjuku" type="checkbox" onclick="level3s();" checked><label for="sample53">少し高め</label>
       <input id="sample54" value="1" name="shinjuku" type="checkbox" onclick="otherss();" checked><label for="sample54">その他</label>
+      </form>
     </div>
     <script>
         const checkbox3 = document.getElementsByName("shinjuku")
