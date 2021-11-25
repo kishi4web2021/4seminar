@@ -9,14 +9,14 @@
     <script type="text/javascript" src="shop_list/shinjuku_data.js"></script>
     <script type="text/javascript" src="./shinjuku_map.js"></script>
     <script>
-      //function loadFinished(){
-        //cafe();
-        //famires();
-        //hamburger(); 
-        //karaoke();
-        //netcafe();
-      //}
-      //window.onload = loadFinished;
+      function loadFinished(){
+        cafe();
+        famires();
+        hamburger(); 
+        karaoke();
+        netcafe();
+      }
+      window.onload = loadFinished;
     </script>
     
     <center>
@@ -63,7 +63,7 @@
       <input id="sample54" value="1" name="shinjuku" type="checkbox" onclick="otherss();" checked><label for="sample54">その他</label>
       <br><br>
       </form>
-      <input type="button" value="ボタン" onclick="clickEvent()" >送信</input>
+      <input type="button" value="条件変更" onclick="clickEvent()" ></input>
       <br>
       <br>
     </div>
