@@ -67,16 +67,16 @@ function createMarker(i, place, markers) {
 }
 
 function cafe(n) {
-  if(n=1){
+  //if(n=1){
     for (var i=0; i<place_cafe.length; i++) {
       createMarker(i, place_cafe, markers_cafe);
     }
-  }else{
-    for (let i = 0; i < markers_cafe.length; i++) {
-      markers_cafe[i].setMap(null);
-    }
-    markers_cafe = [];
-  }
+  //}else{
+    //for (let i = 0; i < markers_cafe.length; i++) {
+      //markers_cafe[i].setMap(null);
+    //}
+    //markers_cafe = [];
+  //}
 }
 
 function famires() {
