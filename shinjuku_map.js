@@ -73,7 +73,7 @@ function cafe(n) {
     }
   }else{
     markers_cafe.setup(null);
-    markers_cade = [];
+    markers_cafe = [];
   }
 }
 
