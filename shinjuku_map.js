@@ -66,9 +66,13 @@ function createMarker(i, place, markers) {
   });
 }
 
-function cafe() {
-  for (var i=0; i<place_cafe.length; i++) {
-    createMarker(i, place_cafe, markers_cafe);
+function cafe(n) {
+  if(n=1){
+    for (var i=0; i<place_cafe.length; i++) {
+      createMarker(i, place_cafe, markers_cafe);
+    }
+  }else{
+    markers_cafe.setup(null);
   }
 }
 
