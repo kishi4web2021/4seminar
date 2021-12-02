@@ -72,7 +72,9 @@ function cafe(n) {
       createMarker(i, place_cafe, markers_cafe);
     }
   }else{
-    markers_cafe.setup(null);
+    for (let i = 0; i < markers_cafe.length; i++) {
+      markers_cafe[i].setMap(null);
+    }
     markers_cafe = [];
   }
 }
