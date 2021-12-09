@@ -3,7 +3,7 @@ function initMap() {
   var latlng = {lat: 35.7217636, lng: 139.4667473};  //小平キャンパスの緯度経度
   var map = new google.maps.Map(document.getElementById('map'), {
     center: latlng,
-    zoom: 
+    zoom: 20
   });
     
   var infowindow = new google.maps.InfoWindow();
