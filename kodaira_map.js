@@ -6,8 +6,8 @@ function initMap() {
     zoom: 20
   });
     
-  //var infowindow = new google.maps.InfoWindow();
-  //var service = new google.maps.places.PlacesService(map);
+  var infowindow = new google.maps.InfoWindow();
+  var service = new google.maps.places.PlacesService(map);
 
   //var request1 = {
     //location: latlng,
