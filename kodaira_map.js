@@ -25,9 +25,9 @@ function initMap() {
   //service.nearbySearch(request2, callback); //ネットカフェ
 
   // カフェ
-  //for (let i=0; i<kodaira_cafe.results.length; i++) { 
-    //createMarker(kodaira_cafe.results[i]);
-  //}
+  for (let i=0; i<kodaira_cafe.results.length; i++) { 
+    createMarker(kodaira_cafe.results[i]);
+  }
   
   //function callback(results, status) {
     //if (status === google.maps.places.PlacesServiceStatus.OK) {
@@ -37,16 +37,16 @@ function initMap() {
     //}
   //}
   
-  //function createMarker(place) {
-    //var placeLoc = place.geometry.location; 
-    //var marker = new google.maps.Marker({
-      //map: map,
-      //position: place.geometry.location  //results[i].geometry.location
-    //});
+  function createMarker(place) {
+    var placeLoc = place.geometry.location; 
+    var marker = new google.maps.Marker({
+      map: map,
+      position: place.geometry.location  //results[i].geometry.location
+    });
  
-    //marker.addListener('click', function() {
-      //infowindow.setContent(place.name);  //results[i].name
-      //infowindow.open(map, this);
-    //});
-  //}
-//}
+    marker.addListener('click', function() {
+      infowindow.setContent(place.name);  //results[i].name
+      infowindow.open(map, this);
+    });
+  }
+}
