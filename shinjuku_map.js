@@ -49,7 +49,7 @@ function createMarker(i, place, markers) {
     title: place[i].name,
   });
 
-  markers.push(marker);
+  //markers.push(marker);
 
   var contentStr = '<a>' + place[i].name + '<br>●Wi-Fi</a>';
 
