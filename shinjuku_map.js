@@ -49,7 +49,7 @@ function createMarker(i, place, markers) {
     title: place[i].name,
   });
 
-  //markers.push(marker);
+  markers.push(marker);
 
   var contentStr = '<a>' + place[i].name + '<br>●Wi-Fi</a>';
 
@@ -67,7 +67,7 @@ function createMarker(i, place, markers) {
 }
 
 // Sets the map on all markers in the array.
-function setMapOnAll(map, markers){
+function setMapOnAll(map){
   for (let i = 0; i < markers.length; i++) {
     markers[i].setMap(map);
   }
@@ -89,18 +89,20 @@ function deleteMarkers(markers) {
   markers = [];
 }
 
-function cafe(n) {
-  if(n=1){
-    //for (var i=0; i<place_cafe.length; i++) {
-      //createMarker(i, place_cafe, markers_cafe);
-    //}
-    showMarkers();
-  }else{
+function cafe() {
+  //if(n=1){
+  for (var i=0; i<place_cafe.length; i++) {
+    createMarker(i, place_cafe, markers_cafe);
+  }
+  setMapOnAll(map);
+  
+    //showMarkers();
+  //}else{
     //for (let i = 0; i < markers_cafe.length; i++) {
       //markers_cafe[i].setMap(null);
     //}
     //markers_cafe = [];
-  }
+  //}
 }
 
 function famires() {
