@@ -9,14 +9,14 @@
     <script type="text/javascript" src="shop_list/shinjuku_data.js"></script>
     <script type="text/javascript" src="./shinjuku_map.js"></script>
     <script>
-      //function loadFinished(){
-        //cafe();
+      function loadFinished(){
+        cafe();
         //famires();
         //hamburger(); 
         //karaoke();
         //netcafe();
-      //}
-      //window.onload = loadFinished;
+      }
+      window.onload = loadFinished;
     </script>
     
     <center>
@@ -78,9 +78,9 @@
         function clickEvent(){
           
           
-          //deleteMakers();
+          deleteMakers(markers_cafe);
           
-          markers_cafe = [], markers_famires = [], markers_hamburger = [], markers_karaoke = [], markers_netcafe = [];
+          //markers_cafe = [], markers_famires = [], markers_hamburger = [], markers_karaoke = [], markers_netcafe = [];
           
           const sample48 = document.getElementById("sample48");
           const sample49 = document.getElementById("sample49");
