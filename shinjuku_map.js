@@ -84,7 +84,7 @@ function showMarkers() {
 }
 
 // Deletes all markers in the array by removing references to them.
-function deleteMarkers() {
+function deleteMarkers(markers) {
   hideMarkers();
   markers = [];
 }
