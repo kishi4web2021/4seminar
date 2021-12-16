@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- <link rel="stylesheet" href="style.css" > -->
+    <title>新宿</title>
+  </head>
+  <body>
+    <script type="text/javascript" src="shop_list/shinjuku_data.js"></script>
+    <script type="text/javascript" src="./shinjuku_map.js"></script>
+    <script>
+      function loadFinished(){
+        //cafe();
+        console.log("ページが読み込まれました")
+      }
+      window.onload = loadFinished;
+    </script>
+    <center>
+      <button onclick="location.href='index.html'">ホーム</button>
+      
+      <h1>テスト（新宿のデータを使用）</h1>
+      <div id="map" style="width:620px; height:400px"></div>
 
+      <script src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyAiV2ZbFIYuD3N4hzGLstSn2e4ZG5A7QlU&callback=initMap&libraries=places" async defer></script>
+      </script>
+      <br>
+      <input type="button" value="条件変更" onclick="clickEvent()" ></input>
+      <script>
+        function clickEvent(){
+          
+          console.log("ボタン押した");
+          //deleteMakers(markers_cafe);
+          markers_cafe = [];
+          markers_cafe.setMap(map);
+        }
+  
+    </center>
+  </body>
+</html>
