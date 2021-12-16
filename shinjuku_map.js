@@ -42,14 +42,14 @@ function createData(results) {
   */
 }
 
-function createMarker(i, place, markers) {
+function createMarker(i, place) {
   var marker = new google.maps.Marker({
     position: { lat:place[i].lat, lng:place[i].lng },
     map: map,
     title: place[i].name,
   });
 
-  markers.push(marker);
+  //markers.push(marker);
 
   var contentStr = '<a>' + place[i].name + '<br>●Wi-Fi</a>';
 
@@ -67,7 +67,7 @@ function createMarker(i, place, markers) {
 }
 
 // Sets the map on all markers in the array.
-function setMapOnAll(map){
+function setMapOnAll(map,markers){
   for (let i = 0; i < markers.length; i++) {
     markers[i].setMap(map);
   }
@@ -92,9 +92,9 @@ function deleteMarkers(markers) {
 function cafe() {
   //if(n=1){
   for (var i=0; i<place_cafe.length; i++) {
-    createMarker(i, place_cafe, markers_cafe);
+    createMarker(i, place_cafe);
   }
-  setMapOnAll(map);
+  setMapOnAll(map,markers_cafe);
   
     //showMarkers();
   //}else{
