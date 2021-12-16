@@ -75,7 +75,7 @@ function setMapOnAll(map,markers){
 
 // Removes the markers from the map, but keeps them in the array.
 function hideMarkers() {
-  setMapOnAll(null);
+  setMapOnAll(null,null);
 }
 
 // Shows any markers currently in the array.
