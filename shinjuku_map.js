@@ -94,7 +94,7 @@ function cafe() {
   for (var i=0; i<place_cafe.length; i++) {
     createMarker(i, place_cafe);
   }
-  setMapOnAll(map,markers_cafe);
+  //setMapOnAll(map,markers_cafe);
   
     //showMarkers();
   //}else{
