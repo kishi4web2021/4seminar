@@ -9,8 +9,10 @@ function createData(results) {
     x = results[i].geometry.location;
     y = results[i].name;
     z = results[i].price_level;
+    s = results[i].url
     x["name"] = y;
     x["price"] = z;
+    x["url"] = s;
 
     switch(results[i].shop) {
       case "cafe":
@@ -51,7 +53,7 @@ function createMarker(i, place) {
 
   //markers.push(marker);
 
-  var contentStr = '<a>' + place[i].name + '<br>●Wi-Fi</a>';
+  var contentStr = '<a>' + place[i].name + '<br>●Wi-Fi</a><br><a href=' + place[i].url + '>Google検索</a>';
 
   var infoWindow = new google.maps.InfoWindow({
     content: contentStr,
