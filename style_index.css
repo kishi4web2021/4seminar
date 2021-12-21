@@ -13,6 +13,10 @@ body{
     background: rgba(255,255,255,0.9);
     padding: 20px;
 }
+.site-logo{
+    height: 20px;
+    width: auto;
+}
 .gnav__menu{
     display: flex;
 }
