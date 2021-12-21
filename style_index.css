@@ -14,8 +14,8 @@ body{
     padding: 20px;
 }
 .site-logo{
-    height: 20px;
-    width: auto;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size:80%
 }
 .gnav__menu{
     display: flex;
