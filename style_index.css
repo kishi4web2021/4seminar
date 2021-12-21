@@ -2,16 +2,16 @@ body{
     background: #81bcd8;
 }
 .site-header{
-    background: rgba(255,255,255,0.5);
+    background: #fff;
     display: flex;
-    padding: 60px 20px;
-    position: fixed;
+    padding: 20px;
+    position: absolute;
     justify-content: space-between;
     width: 100%;
 }
-.site-header.transform{
-    background: rgba(255,255,255,0.9);
-    padding: 20px;
+.site-header.fixed{
+    position: fixed;
+    top: 0;
 }
 .site-logo img{
     height: 20px;
