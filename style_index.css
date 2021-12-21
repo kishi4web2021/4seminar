@@ -1,5 +1,5 @@
 body{
-    background: #81bcd8;
+    background: #852e19;
 }
 .site-header{
     background: rgba(255,255,255,0.5);
@@ -12,10 +12,6 @@ body{
 .site-header.transform{
     background: rgba(255,255,255,0.9);
     padding: 20px;
-}
-.site-logo img{
-    height: 20px;
-    width: auto;
 }
 .gnav__menu{
     display: flex;
