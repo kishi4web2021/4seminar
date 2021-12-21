@@ -7,7 +7,7 @@ body{
     padding: 60px 20px;
     position: fixed;
     justify-content: space-between;
-    width: 90%;
+    width: 95%;
 }
 .site-header.transform{
     background: rgba(255,255,255,0.9);
@@ -15,13 +15,13 @@ body{
 }
 .site-logo{
     font-family: 'Josefin Sans', sans-serif;
-    font-size:200%
+    font-size:500%
 }
 .gnav__menu{
     display: flex;
 }
 .gnav__menu__item{
-    margin-left: 10px;
+    margin-left: 20px;
 }
 .gnav__menu__item a{
     color: #333;
@@ -53,3 +53,4 @@ body{
     font-size: 12px;
     text-align: center;
 }
+list-style: none;
