@@ -21,7 +21,7 @@ body{
     display: flex;
 }
 .gnav__menu__item{
-    margin-left: 20px;
+    margin-left: 10px;
 }
 .gnav__menu__item a{
     color: #333;
