@@ -67,9 +67,14 @@ function createMarker(i, place) {
     currentInfoWindow = infoWindow;
   });
 }
+
 function cafe() {
+  var cafe_latlng = [];
   for (var i=0; i<place_cafe.length; i++) {
-    createMarker(i, place_cafe);
+    cafe_latlng[i] = new google.maps.LatLng(place_cafe[i].lat,place_cafe[i].lng);
+    markers_cafe[i] = new google.maps.Marker({
+      position: cafe_latlng[i]
+    });
   }
 }
 
