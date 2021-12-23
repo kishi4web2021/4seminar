@@ -67,5 +67,5 @@ function doOpen() {
 }
 
 function doClose() {
-  marker.setMap(null);
+  markers_cafe[1].setMap(null);
 }
