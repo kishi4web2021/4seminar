@@ -14,19 +14,45 @@
       window.onload = function () {
         initMap();
       }
+      const checkbox = document.getElementsByName("shinjuku")
+
+      function checkAllBox(trueOrFalse) {
+        for(i = 0; i < checkbox.length; i++) {
+          checkbox[i].checked = trueOrFalse
+        }
+      }
     </script>
   </head>
   <body onload="initMap()">
-    <p>Google Maps APIを使ったサンプルです。</p>
+    <button onclick="location.href='index.html'">ホーム</button>
+    <button onclick="location.href='kodaira.html'">小平キャンパス周辺</button>
+    <button onclick="location.href='kokubunji.html'">国分寺駅周辺</button>
     
-    <div id="map_canvas" style="width:1000px; height:850px"></div>
     
+    <div id="map_canvas" style="width:620px; height:400px"></div>
     <script src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyAiV2ZbFIYuD3N4hzGLstSn2e4ZG5A7QlU&callback=initMap&libraries=places" async defer></script>
+    
+    <br>
+    <button onclick="location.href='kuchikomishinjuku.html'">周辺情報掲示板</button>
+    <br>
+    
+    <h3>絞り込み条件</h3>
+    <input type="button" onClick="checkAllBox(true)" value="全選択">
+    <input type="button" onClick="checkAllBox(false)" value="全解除">
+    <br>
+    
+    <p>お店の種類</p>
+    <input id="sample48" value="1" name="shinjuku" type="checkbox" checked><label for="sample48">カフェ</label>
+    <input id="sample49" value="1" name="shinjuku" type="checkbox" checked><label for="sample49">ファミレス</label>
+    <input id="sample55" value="1" name="shinjuku" type="checkbox" checked><label for="sample55">ハンバーガー</label>
+    <input id="sample51" value="1" name="shinjuku" type="checkbox" checked><label for="sample51">カラオケ</label>
+    <input id="sample50" value="1" name="shinjuku" type="checkbox" checked><label for="sample50">ネットカフェ</label>
     
     <form>
     <p>
     <input type="button" id="open" value="表示" onclick="doOpen()" />
     <input type="button" id="close" value="削除" onclick="doClose()" />
+    <input type="button" value="条件変更" onclick="clickEvent()" ></input>
     </p>
     </form>
   </body>
