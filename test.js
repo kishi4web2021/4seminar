@@ -1,8 +1,8 @@
 var map;
 var marker;
 
-var place_cafe = [];
-var markers_cafe = [];
+var place_cafe = [], place_famires = [], place_hamburger = [], place_karaoke = [], place_netcafe = [];
+var markers_cafe = [], markers_famires = [], markers_hamburger = [], markers_karaoke = [], markers_netcafe = [];
 
 function initMap() {
   var latlng = new google.maps.LatLng(35.69092, 139.7002579);
@@ -34,6 +34,18 @@ function createData(results) {
     switch(results[i].shop) {
       case "cafe":
         place_cafe.push(x);
+        break;
+      case "famires":
+        place_famires.push(x);
+        break;
+      case "hamburger":
+        place_hamburger.push(x);
+        break;
+      case "karaoke":
+        place_karaoke.push(x);
+        break;
+      case "netcafe":
+        place_netcafe.push(x);
         break;
     }
   } 
