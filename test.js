@@ -92,9 +92,61 @@ function createmarker(){
 
 function cafe(w){
   if(w=1){
-    markers_cafe.setMap(map);
+    for(var i=0; i<markers_cafe.length; i++){
+      markers_cafe[i].setMap(map);
+    }
   }else{
-    markers_cafe.setMap(null);
+    for(var i=0; i<markers_cafe.length; i++){
+      markers_cafe[i].setMap(null);
+    }
+  }
+}
+
+function famires(w){
+  if(w=1){
+    for(var i=0; i<markers_famires.length; i++){
+      markers_famires[i].setMap(map);
+    }
+  }else{
+    for(var i=0; i<markers_famires.length; i++){
+      markers_famires[i].setMap(null);
+    }
+  }
+}
+
+function hamburger(w){
+  if(w=1){
+    for(var i=0; i<markers_hamburger.length; i++){
+      markers_hamburger[i].setMap(map);
+    }
+  }else{
+    for(var i=0; i<markers_hamburger.length; i++){
+      markers_hamburger[i].setMap(null);
+    }
+  }
+}
+
+function karaoke(w){
+  if(w=1){
+    for(var i=0; i<markers_karaoke.length; i++){
+      markers_karaoke[i].setMap(map);
+    }
+  }else{
+    for(var i=0; i<markers_cafe.length; i++){
+      markers_karaoke[i].setMap(null);
+    }
+  }
+}
+
+function netcafe(w){
+  if(w=1){
+    for(var i=0; i<markers_netcafe.length; i++){
+      markers_netcafe[i].setMap(map);
+    }
+  }else{
+    for(var i=0; i<markers_netcafe.length; i++){
+      markers_netcafe[i].setMap(null);
+    }
   }
 }
 
