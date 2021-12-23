@@ -2,11 +2,15 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <!-- <link rel="stylesheet" href="style.css" > -->
+    <link rel="stylesheet" href="style.css" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap" rel="stylesheet">
     <title>新宿</title>
   </head>
+  
   <body>
-    <script type="text/javascript" src="shop_list/shinjuku_data.js"></script>
+    <script type="text/javascript" src="shop_list/shinjuku_data.js></script>
     <script type="text/javascript" src="./shinjuku_map.js"></script>
     <script>
       function loadFinished(){
@@ -18,23 +22,34 @@
       }
       window.onload = loadFinished;
     </script>
+
+    <header>
+      <div class="logo">
+        <a href="index.html">mume</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="kodaira.html">小平</a></li>
+          <li><a href="kokubunji.html">国分寺</a></li>
+          <li><a href="shinjuku.html">新宿</a></li>
+          <li><a href="#">掲示板</a></li>
+        </ul>
+      </nav>
+    </header>
     
     <center>
-      <button onclick="location.href='index.html'">ホーム</button>
-      　<button onclick="location.href='kodaira.html'">小平キャンパス周辺</button>
-      <button onclick="location.href='kokubunji.html'">国分寺駅周辺</button>
-      
-      <h1>新宿駅周辺</h1>
+      <br><br><br>
+      <h1>新宿駅周辺
+	<button class="button" onclick="location.href='kuchikomishinjuku.html'">周辺情報掲示板</button>
+	</h1>
+
       <div id="map" style="width:620px; height:400px"></div>
 
       <script src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyAiV2ZbFIYuD3N4hzGLstSn2e4ZG5A7QlU&callback=initMap&libraries=places" async defer></script>
       </script>
-    
-      <br><br>
-      <button onclick="location.href='kuchikomishinjuku.html'">周辺情報掲示板</button>
     </center>
     <div align="center">
-      <br><br>
+      <br>
       <h3>絞り込み条件</h3>
       <br>
       <input type="button" onClick="checkAllBox(true)" value="全選択">
@@ -42,28 +57,28 @@
       <br>
       <form action="">
       <p>コンセントの有無</p>
-      <input id="sample41" value="1" name="shinjuku" type="checkbox" checked><label for="sample41">コンセントあり</label>
-      <input id="sample42" value="1" name="shinjuku" type="checkbox" checked><label for="sample42">コンセントなし</label>
+      <input id="sample41" value="1" name="shinjuku" type="checkbox" checked><label for="sample41" class="checkbox01">コンセントあり</label>
+      <input id="sample42" value="1" name="shinjuku" type="checkbox" checked><label for="sample42" class="checkbox01">コンセントなし</label>
       <p>現在地からの距離</p>
-      <input id="sample43" value="1" name="shinjuku" type="checkbox" onclick="s100m();" checked><label for="sample43">100M以内</label>
-      <input id="sample44" value="1" name="shinjuku" type="checkbox" onclick="s200m();" checked><label for="sample44">200M以内</label>
-      <input id="sample45" value="1" name="shinjuku" type="checkbox" onclick="s300m();" checked><label for="sample45">300M以内</label>
+      <input id="sample43" value="1" name="shinjuku" type="checkbox" onclick="s100m();" checked><label for="sample43" class="checkbox01">100M以内</label>
+      <input id="sample44" value="1" name="shinjuku" type="checkbox" onclick="s200m();" checked><label for="sample44" class="checkbox01">200M以内</label>
+      <input id="sample45" value="1" name="shinjuku" type="checkbox" onclick="s300m();" checked><label for="sample45" class="checkbox01">300M以内</label>
       <p>個室の有無</p>
-      <input id="sample46" value="1" name="shinjuku" type="checkbox" onclick="koshitsu5();" checked><label for="sample46">個室あり</label>
-      <input id="sample47" value="1" name="shinjuku" type="checkbox" onclick="koshitsu6();" checked><label for="sample47">個室なし</label>
+      <input id="sample46" value="1" name="shinjuku" type="checkbox" onclick="koshitsu5();" checked><label for="sample46" class="checkbox01">個室あり</label>
+      <input id="sample47" value="1" name="shinjuku" type="checkbox" onclick="koshitsu6();" checked><label for="sample47" class="checkbox01">個室なし</label>
       <p>お店の種類</p>
-      <input id="sample48" value="1" name="shinjuku" type="checkbox" checked><label for="sample48">カフェ</label>
-      <input id="sample49" value="1" name="shinjuku" type="checkbox" checked><label for="sample49">ファミレス</label>
-      <input id="sample55" value="1" name="shinjuku" type="checkbox" checked><label for="sample55">ハンバーガー</label>
-      <input id="sample51" value="1" name="shinjuku" type="checkbox" checked><label for="sample51">カラオケ</label>
-      <input id="sample50" value="1" name="shinjuku" type="checkbox" checked><label for="sample50">ネットカフェ</label>
+      <input id="sample48" value="1" name="shinjuku" type="checkbox" checked><label for="sample48" class="checkbox01">カフェ</label>
+      <input id="sample49" value="1" name="shinjuku" type="checkbox" checked><label for="sample49" class="checkbox01">ファミレス</label>
+      <input id="sample55" value="1" name="shinjuku" type="checkbox" checked><label for="sample55" class="checkbox01">ハンバーガー</label>
+      <input id="sample51" value="1" name="shinjuku" type="checkbox" checked><label for="sample51" class="checkbox01">カラオケ</label>
+      <input id="sample50" value="1" name="shinjuku" type="checkbox" checked><label for="sample50" class="checkbox01">ネットカフェ</label>
       <p>価格帯</p>
-      <input id="sample52" value="1" name="shinjuku" type="checkbox" onclick="level2s();" checked><label for="sample52">普通</label>
-      <input id="sample53" value="1" name="shinjuku" type="checkbox" onclick="level3s();" checked><label for="sample53">少し高め</label>
-      <input id="sample54" value="1" name="shinjuku" type="checkbox" onclick="otherss();" checked><label for="sample54">その他</label>
+      <input id="sample52" value="1" name="shinjuku" type="checkbox" onclick="level2s();" checked><label for="sample52" class="checkbox01">普通</label>
+      <input id="sample53" value="1" name="shinjuku" type="checkbox" onclick="level3s();" checked><label for="sample53" class="checkbox01">少し高め</label>
+      <input id="sample54" value="1" name="shinjuku" type="checkbox" onclick="otherss();" checked><label for="sample54" class="checkbox01">その他</label>
       <br><br>
       </form>
-      <input type="button" value="条件変更" onclick="clickEvent()" ></input>
+      <button class="button-1" onclick="clickEvent()">条件変更</button>
       <br>
       <br>
     </div>
@@ -87,4 +102,3 @@
      </script>
   </body>
 </html>
-
