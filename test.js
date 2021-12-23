@@ -15,10 +15,11 @@ function initMap() {
   
   createData(shinjuku_data.results);
   
-  var m_latlng = new google.maps.LatLng(place_hamburger[1].lat,place_hamburger[1].lng);
-  marker = new google.maps.Marker({
-    position: m_latlng,
-  });
+  //var m_latlng = new google.maps.LatLng(place_hamburger[1].lat,place_hamburger[1].lng);
+  //marker = new google.maps.Marker({
+    //position: m_latlng,
+  //});
+  createcafemarker();
 }
 
 function createData(results) {
@@ -51,8 +52,18 @@ function createData(results) {
   } 
 }
 
+function createcafemarker(){
+  var m_latlng = [];
+  for(var i=0; i<place_cafe.length; i++){
+    m_latlng[i] = new google.maps.LatLng(place_cafe[i].lat,place_cafe[i].lng);
+    markers_cafe[i] = new google.maps.Marker({
+      position: m_latlng[i],
+    });
+  }
+}
+
 function doOpen() {
-  marker.setMap(map);
+  markers_cafe[1].setMap(map);
 }
 
 function doClose() {
