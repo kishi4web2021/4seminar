@@ -62,7 +62,7 @@ function createcafemarker(){
   }
 }
 
-function cafe(var w){
+function cafe(w){
   if(w=1){
     markers_cafe.setMap(map);
   }else{
