@@ -46,7 +46,7 @@ header a {
   position: relative;  /* アンダーバーの位置を決めるための基準 */
 }
 
-li ::after {
+header li ::after {
   position: absolute; /*親要素であるaタグを基準に位置を指定*/
   bottom: 10px; /*アンダーバーが位置する、各リストの下端からの高さ*/
   left: 0;/*アンダーバーを各リストの左端に指定*/
@@ -59,7 +59,7 @@ li ::after {
   transition: transform 0.5s;/*変形の時間*/
 }
 
-li :hover::after {
+header li :hover::after {
   transform: scale(1, 1); /*ホバー後、x軸方向に1（相対値）伸長*/
 }
 
