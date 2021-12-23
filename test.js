@@ -71,9 +71,9 @@ function cafe(w){
 }
 
 function doOpen() {
-  markers_cafe[1].setMap(map);
+  markers_cafe.setMap(map);
 }
 
 function doClose() {
-  markers_cafe[1].setMap(null);
+  markers_cafe.setMap(null);
 }
