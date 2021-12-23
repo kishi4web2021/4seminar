@@ -62,6 +62,14 @@ function createcafemarker(){
   }
 }
 
+function cafe(var w){
+  if(w=1){
+    markers_cafe.setMap(map);
+  }else{
+    markers_cafe.setMap(null);
+  }
+}
+
 function doOpen() {
   markers_cafe[1].setMap(map);
 }
