@@ -15,7 +15,7 @@ function initMap() {
   
   createData(shinjuku_data.results);
   
-  var m_latlng = new google.maps.LatLng(place_hamburger[1].lat,place_humburger[1].lng);
+  var m_latlng = new google.maps.LatLng(place_hamburger[1].lat,place_hamburger[1].lng);
   marker = new google.maps.Marker({
     position: m_latlng,
   });
