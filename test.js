@@ -1,5 +1,4 @@
 var map;
-var marker;
 
 var place_cafe = [], place_famires = [], place_hamburger = [], place_karaoke = [], place_netcafe = [];
 var markers_cafe = [], markers_famires = [], markers_hamburger = [], markers_karaoke = [], markers_netcafe = [];
@@ -15,10 +14,6 @@ function initMap() {
   
   createData(shinjuku_data.results);
   
-  //var m_latlng = new google.maps.LatLng(place_hamburger[1].lat,place_hamburger[1].lng);
-  //marker = new google.maps.Marker({
-    //position: m_latlng,
-  //});
   createmarker();
 }
 
@@ -90,6 +85,7 @@ function createmarker(){
   }
 }
 
+var w = 0;
 function cafe(w){
   if(w=1){
     for(var i=0; i<markers_cafe.length; i++){
