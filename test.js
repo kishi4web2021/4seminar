@@ -85,75 +85,62 @@ function createmarker(){
   }
 }
 
-var w = 0;
-function cafe(w){
-  if(w=1){
-    for(var i=0; i<markers_cafe.length; i++){
-      markers_cafe[i].setMap(map);
-    }
-  }else{
-    for(var i=0; i<markers_cafe.length; i++){
-      markers_cafe[i].setMap(null);
-    }
-  }
-}
-
-function famires(w){
-  if(w=1){
-    for(var i=0; i<markers_famires.length; i++){
-      markers_famires[i].setMap(map);
-    }
-  }else{
-    for(var i=0; i<markers_famires.length; i++){
-      markers_famires[i].setMap(null);
-    }
-  }
-}
-
-function hamburger(w){
-  if(w=1){
-    for(var i=0; i<markers_hamburger.length; i++){
-      markers_hamburger[i].setMap(map);
-    }
-  }else{
-    for(var i=0; i<markers_hamburger.length; i++){
-      markers_hamburger[i].setMap(null);
-    }
-  }
-}
-
-function karaoke(w){
-  if(w=1){
-    for(var i=0; i<markers_karaoke.length; i++){
-      markers_karaoke[i].setMap(map);
-    }
-  }else{
-    for(var i=0; i<markers_cafe.length; i++){
-      markers_karaoke[i].setMap(null);
-    }
-  }
-}
-
-function netcafe(w){
-  if(w=1){
-    for(var i=0; i<markers_netcafe.length; i++){
-      markers_netcafe[i].setMap(map);
-    }
-  }else{
-    for(var i=0; i<markers_netcafe.length; i++){
-      markers_netcafe[i].setMap(null);
-    }
-  }
-}
-
-function doOpen() {
+function cafe(){
   for(var i=0; i<markers_cafe.length; i++){
     markers_cafe[i].setMap(map);
   }
 }
 
-function doClose() {
+function famires(){
+  for(var i=0; i<markers_famires.length; i++){
+    markers_famires[i].setMap(map);
+  }
+}
+
+function hamburger(){
+  for(var i=0; i<markers_hamburger.length; i++){
+    markers_hamburger[i].setMap(map);
+  }
+}
+
+function karaoke(){
+  for(var i=0; i<markers_karaoke.length; i++){
+    markers_karaoke[i].setMap(map);
+  }
+}
+
+function netcafe(){
+  for(var i=0; i<markers_netcafe.length; i++){
+    markers_netcafe[i].setMap(map);
+  }
+}
+
+function deletemarkersall(){
   for(var i=0; i<markers_cafe.length; i++){
     markers_cafe[i].setMap(null);
   }
+  for(var j=0; j<markers_famires.length; j++){
+    markers_famires[j].setMap(null);
+  }
+  for(var k=0; k<markers_hamburger.length; k++){
+    markers_hamburger[k].setMap(null);
+  }
+  for(var l=0; l<markers_karaoke.length; l++){
+    markers_karaoke[l].setMap(null);
+  }
+  for(var m=0; m<markers_netcafe.length; m++){
+    markers_netcafe[m].setMap(null);
+  }
 }
+
+//function doOpen() {
+  //for(var i=0; i<markers_cafe.length; i++){
+    //markers_cafe[i].setMap(map);
+  //}
+//}
+
+//function doClose() {
+  //for(var i=0; i<markers_cafe.length; i++){
+    //markers_cafe[i].setMap(null);
+  //}
+//}
