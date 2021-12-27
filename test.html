@@ -10,10 +10,7 @@
     <script src="shop_list/shinjuku_karaoke.js" type="text/javascript"></script>
     <script src="shop_list/shinjuku_netcafe.js" type="text/javascript"></script>
     <script src="test.js" type="text/javascript"></script>
-    <script>
-      //window.onload = function () {
-        //initMap();
-      //}      
+    <script>   
       function loadFinished(){
         initMap();
         cafe();
@@ -22,17 +19,12 @@
         karaoke();
         netcafe();
       }
-      window.onload = loadFinished;
 
       const checkbox = document.getElementsByName("shinjuku")
       function checkAllBox(trueOrFalse) {
         for(i = 0; i < checkbox.length; i++) {
           checkbox[i].checked = trueOrFalse
         }
-      }
-      
-      function clickEvent(){
-        deletemarkersall();
       }
       
     </script>
@@ -57,16 +49,37 @@
     <br>
     
     <p>お店の種類</p>
-    <input id="1" name="cafe" type="checkbox" checked><label for="cafe">カフェ</label>
-    <input id="2" name="famires" type="checkbox" checked><label for="famires">ファミレス</label>
-    <input id="3" name="hamburger" type="checkbox" checked><label for="hamburger">ハンバーガー</label>
-    <input id="4" name="karaoke" type="checkbox" checked><label for="karaoke">カラオケ</label>
-    <input id="5" name="netcafe" type="checkbox" checked><label for="netcafe">ネットカフェ</label>
+    <input id="cafebox" name="cafe" type="checkbox" checked><label for="cafe">カフェ</label>
+    <input id="famiresbox" name="famires" type="checkbox" checked><label for="famires">ファミレス</label>
+    <input id="hamburgerbox" name="hamburger" type="checkbox" checked><label for="hamburger">ハンバーガー</label>
+    <input id="karaokebox" name="karaoke" type="checkbox" checked><label for="karaoke">カラオケ</label>
+    <input id="netcafebox" name="netcafe" type="checkbox" checked><label for="netcafe">ネットカフェ</label>
     
     <form>
     <p>
     <input type="button" value="条件変更" onclick="clickEvent()" ></input>
     </p>
     </form>
+
+    <script>
+      function clickEvent(){
+        deletemarkersall();
+        if(cafebox.checked){
+          cafe();
+        }
+        if(famiresbox.checked){
+          famires();
+        }
+        if(hamburgerbox.checked){
+          hamburger();
+        }
+        if(karaokebox.checked){
+          karaoke();
+        }
+        if(netcafebox.checked){
+          netcafe();
+        }
+      }
+    </script>
   </body>
 </html>
