@@ -11,17 +11,16 @@
     <script src="shop_list/shinjuku_netcafe.js" type="text/javascript"></script>
     <script src="test.js" type="text/javascript"></script>
     <script>
-      window.onload = function () {
-        initMap();
-      }
-      
+      //window.onload = function () {
+        //initMap();
+      //}      
       function loadFinished(){
-        w=1;
-        cafe(w);
-        famires(w);
-        hamburger(w); 
-        karaoke(w);
-        netcafe(w);
+        initMap();
+        cafe();
+        famires();
+        hamburger(); 
+        karaoke();
+        netcafe();
       }
       window.onload = loadFinished;
 
@@ -33,12 +32,9 @@
       }
       
       function clickEvent(){
-        cafe(0);
-        famires(0);
-        hamburger(0);
-        karaoke(0);
-        netcafe(0);
+        deletemarkersall()
       }
+      
     </script>
   </head>
   <body onload="initMap()">
