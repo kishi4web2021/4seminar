@@ -13,14 +13,19 @@
     <script>
       window.onload = function () {
         initMap();
-        cafe(1);
-        famires(1);
-        hamburger(1);
-        karaoke(1);
-        netcafe(1);
       }
-      const checkbox = document.getElementsByName("shinjuku")
+      
+      function loadFinished(){
+        w=1;
+        cafe(w);
+        famires(w);
+        hamburger(w); 
+        karaoke(w);
+        netcafe(w);
+      }
+      window.onload = loadFinished;
 
+      const checkbox = document.getElementsByName("shinjuku")
       function checkAllBox(trueOrFalse) {
         for(i = 0; i < checkbox.length; i++) {
           checkbox[i].checked = trueOrFalse
