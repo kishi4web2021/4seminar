@@ -16,19 +16,24 @@ function createData(results) {
 
     switch(results[i].shop) {
       case "cafe":
-        place_cafe.push(x);
+	x["icon_path"] = './icon1.png'
+	place_cafe.push(x);
         break;
       case "famires":
-        place_famires.push(x);
+	x["icon_path"] = './icon2.png'
+	place_famires.push(x);
         break;
       case "hamburger":
-        place_hamburger.push(x);
+	x["icon_path"] = './icon3.png'
+	place_hamburger.push(x);
         break;
       case "karaoke":
-        place_karaoke.push(x);
+	x["icon_path"] = './icon4.png'
+	place_karaoke.push(x);
         break;
       case "netcafe":
-        place_netcafe.push(x);
+	x["icon_path"] = './icon5.png'
+	place_netcafe.push(x);
         break;
     }
   } 
@@ -45,13 +50,13 @@ function createData(results) {
   */
 }
 
-function createMarker(i, place, icon) {
+function createMarker(i, place) {
   var marker = new google.maps.Marker({
     position: { lat:place[i].lat, lng:place[i].lng },
     map: map,
     title: place[i].name,
     icon: {
-	url: icon ,
+	url: place[i].icon_path ,
 	scaledSize: new google.maps.Size( 27, 40 ) ,
   }
 
@@ -98,10 +103,9 @@ function deleteMarkers(markers) {
 }
 
 function cafe() {
-  icon = 'img/icon1.png'
   //if(n=1){
   for (var i=0; i<place_cafe.length; i++) {
-      createMarker(i, place_cafe, icon);
+      createMarker(i, place_cafe);
   }
   //setMapOnAll(map,markers_cafe);
   
@@ -115,30 +119,26 @@ function cafe() {
 }
 
 function famires() {
-  icon = 'img/icon2.png'
   for (var i=0; i<place_famires.length; i++) {
-      createMarker(i, place_famires, icon);
+      createMarker(i, place_famires);
   }
 }
 
 function hamburger() {
-  icon = 'img/icon3.png'
   for (var i=0; i<place_hamburger.length; i++) {
-      createMarker(i, place_hamburger, icon);
+      createMarker(i, place_hamburger);
   }
 }
 
 function karaoke() {
-  icon = 'img/icon4.png'
   for (var i=0; i<place_karaoke.length; i++) {
-      createMarker(i, place_karaoke, icon);
+      createMarker(i, place_karaoke);
   }
 }
 
 function netcafe() {
-  icon = 'img/icon5.png'
   for (var i=0; i<place_netcafe.length; i++) {
-      createMarker(i, place_netcafe, icon);
+      createMarker(i, place_netcafe);
   }
 }
 
@@ -151,8 +151,8 @@ function initMap() {
   });
   createData(shinjuku_data.results);
   //cafe();
-  famires();
-  hamburger(); 
-  karaoke();
-  netcafe();
+  //famires();
+  //hamburger(); 
+  //karaoke();
+  //netcafe();
 }
