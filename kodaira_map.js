@@ -11,7 +11,7 @@ function initMap() {
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
   map = new google.maps.Map(document.getElementById("map_canvas"), opts);
-  
+  var infowindow = new google.maps.InfoWindow();
   createData(shinjuku_data.results);
   
   createmarker();
@@ -76,6 +76,10 @@ function createmarker(){
     markers_hamburger[k] = new google.maps.Marker({
       position: hamburger_latlng[k],
     });
+    markers_hamburger[k].addListener('click', function() {
+      infowindow.setContent(place_hamburger[k].name);  //results[i].name
+      infowindow.open(map, this);
+    });
   }
   var karaoke_latlng = [];
   for(var m=0; m<place_karaoke.length; m++){
@@ -83,12 +87,20 @@ function createmarker(){
     markers_karaoke[m] = new google.maps.Marker({
       position: karaoke_latlng[m],
     });
+    markers_karaoke[m].addListener('click', function() {
+      infowindow.setContent(place_karaoke[m].name);  //results[i].name
+      infowindow.open(map, this);
+    });
   }
   var netcafe_latlng = [];
   for(var n=0; n<place_netcafe.length; n++){
     netcafe_latlng[n] = new google.maps.LatLng(place_netcafe[n].lat,place_netcafe[n].lng);
     markers_netcafe[n] = new google.maps.Marker({
       position: netcafe_latlng[n],
+    });
+    markers_famires[n].addListener('click', function() {
+      infowindow.setContent(place_famires[n].name);  //results[i].name
+      infowindow.open(map, this);
     });
   }
 }
