@@ -5,14 +5,23 @@ var place_cafe = [], place_famires = [], place_hamburger = [], place_karaoke = [
 var markers_cafe = [], markers_famires = [], markers_hamburger = [], markers_karaoke = [], markers_netcafe = []; 
 
 function createData(results) {
-  for (let i=0; i<results.length; i++) {
-    x = results[i].geometry.location;
-    y = results[i].name;
-    z = results[i].price_level;
-    s = results[i].url
-    x["name"] = y;
-    x["price"] = z;
-    x["url"] = s;
+    for (let i=0; i<results.length; i++) {
+	x = results[i].geometry.location;
+	y = results[i].name;
+	z = results[i].price_level;
+	
+	r = results[i].distance;
+	s = results[i].url;
+	t = results[i].website;
+	u = results[i].hours;
+	    
+	x["name"] = y;
+	x["price"] = z;
+	
+	x["distance"] = r;
+	x["url"] = s;
+	x["website"] = t;
+	x["hours"] = u;
 
     switch(results[i].shop) {
       case "cafe":
@@ -62,9 +71,18 @@ function createMarker(i, place) {
 
   });
 
-  //markers.push(marker);
+    //markers.push(marker);
 
-  var contentStr = '<a>' + place[i].name + '<br>●Wi-Fi</a>' + '<br><a href=' + place[i].url + '>Google検索</a>';
+    var date = new Date();
+    var dayOfWeek = date.getDay();
+    
+    var contentStr = '<a>' + place[i].name + '<br>●Wi-Fi<br>●新宿駅から' + place[i].distance + 'm<br>●本日の営業時間：(後で変更予定)' + '</a>' + '<br><a href=';
+
+    if(place[i].website){
+	contentStr = contentStr + place[i].website + '>ホームページ</a> / '
+    }
+    contentStr = contentStr + '<a href=' + place[i].url + '>Google検索</a>'
+    
 
   var infoWindow = new google.maps.InfoWindow({
     content: contentStr,
