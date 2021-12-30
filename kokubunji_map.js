@@ -166,7 +166,7 @@ function initMap() {
     center: latlng,
     zoom: 15
   });
-  createData(shinjuku_data.results);
+  createData(kokubunji_data.results);
   //cafe();
   //famires();
   //hamburger(); 
