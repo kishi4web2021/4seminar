@@ -4,9 +4,9 @@
 
 body {
  background-color: #fff7fc;
- opacity: 0.9;
- background-image: radial-gradient(#ff0000 0.75px, #fff7fc 0.75px);
- background-size: 15px 15px;
+ /* opacity: 0.9; */
+ /* background-image: radial-gradient(#ff0000 0.75px, #fff7fc 0.75px); */
+ /* background-size: 15px 15px; */
 }
 
 
