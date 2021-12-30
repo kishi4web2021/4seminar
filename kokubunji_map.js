@@ -164,7 +164,7 @@ function initMap() {
   var latlng = {lat: 35.7002283, lng: 139.4805254};  //国分寺駅の緯度経度
   map = new google.maps.Map(document.getElementById('map'), {
     center: latlng,
-    zoom: 15
+    zoom: 16
   });
   createData(kokubunji_data.results);
   //cafe();
