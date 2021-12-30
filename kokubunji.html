@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" >
+    <title>国分寺</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+   <script>
+   $(function() {
+      const hum = $('#hamburger, .close')
+      const nav = $('.sp-nav')
+      hum.on('click', function(){
+         nav.toggleClass('toggle');
+      });
+   });
+   </script>
+  </head>
+  
+  <body>
+	  <header>
+      <div class="logo">
+        <a href="index.html">mume</a>
+      </div>
+      <nav class="pc-nav">
+        <ul>
+          <li><a href="kodaira.html">小平</a></li>
+          <li><a href="kokubunji.html">国分寺</a></li>
+          <li><a href="shinjuku.html">新宿</a></li>
+          <li><a href="#">掲示板</a></li>
+        </ul>
+      </nav>
+      <nav class="sp-nav">
+        <ul>
+          <li><a href="kodaira.html">小平</a></li>
+          <li><a href="kokubunji.html">国分寺</a></li>
+          <li><a href="shinjuku.html">新宿</a></li>
+          <li><a href="#">掲示板</a></li>
+	  <li class="close"><span>閉じる</span></li>
+        </ul>
+      </nav>
+      <div id="hamburger">
+	<span></span>
+      </div>
+    </header>
+	  <!-- ここからはじまり -->
+    <script type="text/javascript" src="shop_list/kokubunji_data.js"></script>
+    <script type="text/javascript" src="./kokubunji_map.js"></script>
+    <script>
+      function loadFinished(){
+        cafe();
+        famires();
+        hamburger(); 
+        karaoke();
+        netcafe();
+      }
+      window.onload = loadFinished;
+    </script>
+    
+    <center>
+      <br><br><br>
+      <h1>国分寺駅周辺
+	<button class="button" onclick="location.href='kuchikomishinjuku.html'">周辺情報掲示板</button>
+	</h1>
+
+      <div class="map" id="map" style="width:620px; height:400px"></div>
+
+      <script src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyAiV2ZbFIYuD3N4hzGLstSn2e4ZG5A7QlU&callback=initMap&libraries=places" async defer></script>
+      </script>
+    </center>
+    <div align="center">
+      <br>
+      <h3>絞り込み条件</h3>
+      <br>
+      <input type="button" onClick="checkAllBox(true)" value="全選択">
+      <input type="button" onClick="checkAllBox(false)" value="全解除">
+      <br>
+      <form action="">
+      <p>コンセントの有無</p>
+      <input id="sample41" value="1" name="shinjuku" type="checkbox" checked><label for="sample41" class="checkbox01">コンセントあり</label>
+      <input id="sample42" value="1" name="shinjuku" type="checkbox" checked><label for="sample42" class="checkbox01">コンセントなし</label>
+      <p>国分寺駅からの距離</p>
+      <input id="sample43" value="1" name="shinjuku" type="checkbox" onclick="s100m();" checked><label for="sample43" class="checkbox01">300M以内</label>
+      <input id="sample44" value="1" name="shinjuku" type="checkbox" onclick="s200m();" checked><label for="sample44" class="checkbox01">500M以内</label>
+      <input id="sample45" value="1" name="shinjuku" type="checkbox" onclick="s300m();" checked><label for="sample45" class="checkbox01">1KM以内</label>
+      <p>個室の有無</p>
+      <input id="sample46" value="1" name="shinjuku" type="checkbox" onclick="koshitsu5();" checked><label for="sample46" class="checkbox01">個室あり</label>
+      <input id="sample47" value="1" name="shinjuku" type="checkbox" onclick="koshitsu6();" checked><label for="sample47" class="checkbox01">個室なし</label>
+      <p>お店の種類</p>
+      <input id="sample48" value="1" name="shinjuku" type="checkbox" checked><label for="sample48" class="checkbox01">カフェ</label>
+      <input id="sample49" value="1" name="shinjuku" type="checkbox" checked><label for="sample49" class="checkbox01">ファミレス</label>
+      <input id="sample55" value="1" name="shinjuku" type="checkbox" checked><label for="sample55" class="checkbox01">ハンバーガー</label>
+      <input id="sample51" value="1" name="shinjuku" type="checkbox" checked><label for="sample51" class="checkbox01">カラオケ</label>
+      <input id="sample50" value="1" name="shinjuku" type="checkbox" checked><label for="sample50" class="checkbox01">ネットカフェ</label>
+      <p>価格帯</p>
+      <input id="sample52" value="1" name="shinjuku" type="checkbox" onclick="level2s();" checked><label for="sample52" class="checkbox01">普通</label>
+      <input id="sample53" value="1" name="shinjuku" type="checkbox" onclick="level3s();" checked><label for="sample53" class="checkbox01">少し高め</label>
+      <input id="sample54" value="1" name="shinjuku" type="checkbox" onclick="otherss();" checked><label for="sample54" class="checkbox01">その他</label>
+      <br><br>
+      </form>
+      <button class="button-1" onclick="clickEvent()">条件変更</button>
+      <br>
+      <br>
+    </div>
+    <script>
+        const checkbox3 = document.getElementsByName("shinjuku")
+
+        function checkAllBox(trueOrFalse) {
+          for(i = 0; i < checkbox3.length; i++) {
+            checkbox3[i].checked = trueOrFalse
+          }
+        }
+        function clickEvent(){
+          
+          console.log("ボタン押した");
+          //deleteMakers(markers_cafe);
+          markers_cafe = [];
+          markers_cafe.setMap(map);
+          
+         
+        }
+     </script>
+	<!-- ここまで終わり -->
+  </body>
+</html>
