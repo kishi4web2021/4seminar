@@ -97,80 +97,102 @@ function createMarker(i, place) {
   });
 }
 
-// Sets the map on all markers in the array.
-function setMapOnAll(map,markers){
-  for (let i = 0; i < markers.length; i++) {
-    markers[i].setMap(map);
-  }
-}
-
-// Removes the markers from the map, but keeps them in the array.
-function hideMarkers() {
-  setMapOnAll(null,null);
-}
-
-// Shows any markers currently in the array.
-function showMarkers() {
-  setMapOnAll(map);
-}
-
-// Deletes all markers in the array by removing references to them.
-function deleteMarkers(markers) {
-  hideMarkers();
-  markers = [];
-}
-
-function cafe() {
-  //if(n=1){
-  for (var i=0; i<place_cafe.length; i++) {
-      createMarker(i, place_cafe);
-  }
-  //setMapOnAll(map,markers_cafe);
-  
-    //showMarkers();
-  //}else{
-    //for (let i = 0; i < markers_cafe.length; i++) {
-      //markers_cafe[i].setMap(null);
-    //}
-    //markers_cafe = [];
-  //}
-}
-
-function famires() {
-  for (var i=0; i<place_famires.length; i++) {
-      createMarker(i, place_famires);
-  }
-}
-
-function hamburger() {
-  for (var i=0; i<place_hamburger.length; i++) {
-      createMarker(i, place_hamburger);
-  }
-}
-
-function karaoke() {
-  for (var i=0; i<place_karaoke.length; i++) {
-      createMarker(i, place_karaoke);
-  }
-}
-
-function netcafe() {
-  for (var i=0; i<place_netcafe.length; i++) {
-      createMarker(i, place_netcafe);
-  }
-}
-
 function initMap() {
-  var target = document.getElementById('map');  
-  var latlng = { lat: 35.69092, lng: 139.7002579 };
-  map = new google.maps.Map(document.getElementById('map'), {
+  var latlng = new google.maps.LatLng(35.69092, 139.7002579);
+  var opts = {
+    zoom: 16,
     center: latlng,
-    zoom: 16
-  });
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  map = new google.maps.Map(document.getElementById("map_canvas"), opts);
+  
   createData(shinjuku_data.results);
-  //cafe();
-  //famires();
-  //hamburger(); 
-  //karaoke();
-  //netcafe();
+  
+  createmarker();
+}
+
+function createmarker(){
+  var cafe_latlng = [];
+  for(var i=0; i<place_cafe.length; i++){
+    cafe_latlng[i] = new google.maps.LatLng(place_cafe[i].lat,place_cafe[i].lng);
+    markers_cafe[i] = new google.maps.Marker({
+      position: cafe_latlng[i],
+    });
+  }
+  var famires_latlng = [];
+  for(var j=0; j<place_famires.length; j++){
+    famires_latlng[j] = new google.maps.LatLng(place_famires[j].lat,place_famires[j].lng);
+    markers_famires[j] = new google.maps.Marker({
+      position: famires_latlng[j],
+    });
+  }
+  var hamburger_latlng = [];
+  for(var k=0; k<place_hamburger.length; k++){
+    hamburger_latlng[k] = new google.maps.LatLng(place_hamburger[k].lat,place_hamburger[k].lng);
+    markers_hamburger[k] = new google.maps.Marker({
+      position: hamburger_latlng[k],
+    });
+  }
+  var karaoke_latlng = [];
+  for(var m=0; m<place_karaoke.length; m++){
+    karaoke_latlng[m] = new google.maps.LatLng(place_karaoke[m].lat,place_karaoke[m].lng);
+    markers_karaoke[m] = new google.maps.Marker({
+      position: karaoke_latlng[m],
+    });
+  }
+  var netcafe_latlng = [];
+  for(var n=0; n<place_netcafe.length; n++){
+    netcafe_latlng[n] = new google.maps.LatLng(place_netcafe[n].lat,place_netcafe[n].lng);
+    markers_netcafe[n] = new google.maps.Marker({
+      position: netcafe_latlng[n],
+    });
+  }
+}
+
+function cafe(){
+  for(var i=0; i<markers_cafe.length; i++){
+    markers_cafe[i].setMap(map);
+  }
+}
+
+function famires(){
+  for(var i=0; i<markers_famires.length; i++){
+    markers_famires[i].setMap(map);
+  }
+}
+
+function hamburger(){
+  for(var i=0; i<markers_hamburger.length; i++){
+    markers_hamburger[i].setMap(map);
+  }
+}
+
+function karaoke(){
+  for(var i=0; i<markers_karaoke.length; i++){
+    markers_karaoke[i].setMap(map);
+  }
+}
+
+function netcafe(){
+  for(var i=0; i<markers_netcafe.length; i++){
+    markers_netcafe[i].setMap(map);
+  }
+}
+
+function deletemarkersall(){
+  for(var i=0; i<markers_cafe.length; i++){
+    markers_cafe[i].setMap(null);
+  }
+  for(var j=0; j<markers_famires.length; j++){
+    markers_famires[j].setMap(null);
+  }
+  for(var k=0; k<markers_hamburger.length; k++){
+    markers_hamburger[k].setMap(null);
+  }
+  for(var l=0; l<markers_karaoke.length; l++){
+    markers_karaoke[l].setMap(null);
+  }
+  for(var m=0; m<markers_netcafe.length; m++){
+    markers_netcafe[m].setMap(null);
+  }
 }
