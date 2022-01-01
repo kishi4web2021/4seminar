@@ -71,7 +71,7 @@ function createMarker(i, place) {
 
   });
 
-    //markers.push(marker);
+    
 
     var date = new Date();
     var dayOfWeek = date.getDay();
@@ -116,7 +116,34 @@ function createmarker(){
   for(var i=0; i<place_cafe.length; i++){
     cafe_latlng[i] = new google.maps.LatLng(place_cafe[i].lat,place_cafe[i].lng);
     markers_cafe[i] = new google.maps.Marker({
-      position: cafe_latlng[i],
+      position: cafe_latlng[i], 
+      title: place_cafe[i].name,
+      icon: {
+	url: place_cafe[i].icon_path ,
+	scaledSize: new google.maps.Size( 27, 40 ) ,
+      }
+    });
+    var date = new Date();
+    var dayOfWeek = date.getDay();
+    
+    var contentStr = '<a>' + place[i].name + '<br>●Wi-Fi<br>●新宿駅から' + place_cafe[i].distance + 'm<br>●本日の営業時間：(後で変更予定)' + '</a>' + '<br><a href=';
+
+    if(place_cafe[i].website){
+	contentStr = contentStr + place_cafe[i].website + '>ホームページ</a> / '
+    }
+    contentStr = contentStr + '<a href=' + place_cafe[i].url + '>Google検索</a>'
+    
+
+    var infoWindow = new google.maps.InfoWindow({
+      content: contentStr,
+    });
+
+    google.maps.event.addListener(markers_cafe, 'click', function(){
+      if(currentInfoWindow != null) {
+        currentInfoWindow.close();
+      }
+      infoWindow.open(map, markers_cafe);
+      currentInfoWindow = infoWindow;
     });
   }
   var famires_latlng = [];
@@ -124,6 +151,11 @@ function createmarker(){
     famires_latlng[j] = new google.maps.LatLng(place_famires[j].lat,place_famires[j].lng);
     markers_famires[j] = new google.maps.Marker({
       position: famires_latlng[j],
+      title: place_famires[j].name,
+      icon: {
+	url: place_famires[j].icon_path ,
+	scaledSize: new google.maps.Size( 27, 40 ) ,
+      }
     });
   }
   var hamburger_latlng = [];
@@ -131,6 +163,11 @@ function createmarker(){
     hamburger_latlng[k] = new google.maps.LatLng(place_hamburger[k].lat,place_hamburger[k].lng);
     markers_hamburger[k] = new google.maps.Marker({
       position: hamburger_latlng[k],
+      title: place_hamburger[k].name,
+      icon: {
+	url: place_humburger[k].icon_path ,
+	scaledSize: new google.maps.Size( 27, 40 ) ,
+      }
     });
   }
   var karaoke_latlng = [];
@@ -138,6 +175,11 @@ function createmarker(){
     karaoke_latlng[m] = new google.maps.LatLng(place_karaoke[m].lat,place_karaoke[m].lng);
     markers_karaoke[m] = new google.maps.Marker({
       position: karaoke_latlng[m],
+      title: place_karaoke[m].name,
+      icon: {
+	url: place_karaoke[m].icon_path ,
+	scaledSize: new google.maps.Size( 27, 40 ) ,
+      }
     });
   }
   var netcafe_latlng = [];
@@ -145,6 +187,11 @@ function createmarker(){
     netcafe_latlng[n] = new google.maps.LatLng(place_netcafe[n].lat,place_netcafe[n].lng);
     markers_netcafe[n] = new google.maps.Marker({
       position: netcafe_latlng[n],
+      title: place_netcafe[n].name,
+      icon: {
+	url: place_netcafe[n].icon_path ,
+	scaledSize: new google.maps.Size( 27, 40 ) ,
+      }
     });
   }
 }
