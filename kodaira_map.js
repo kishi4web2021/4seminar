@@ -152,3 +152,30 @@ function deletemarkersall(){
     markers_netcafe[m].setMap(null);
   }
 }
+
+//
+function initMap() {
+  var target = document.getElementById('map');  
+  var latlng = {lat: 35.7217636, lng: 139.4667473};  //小平キャンパスの緯度経度
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: latlng,
+    zoom: 14
+  });
+    
+  var infowindow = new google.maps.InfoWindow();
+  var service = new google.maps.places.PlacesService(map);
+
+  var request1 = {
+    location: latlng,
+    radius: 2000,
+    keyword: 'カラオケ館ORカラオケマックORジョイサウンドORカラオケの鉄人ORカラオケパセラORカラオケバンバンOR歌広場ORワンカラ'
+  };
+
+  var request2 = {
+    location: latlng,
+    radius: 2000,
+    keyword: '快活クラブORグランサイバーカフェバグースORマンボーORカスタマカフェORコミックバスターORネットカフェジャム'
+  };
+  
+  service.nearbySearch(request1, callback); //カラオケ
+  service.nearbySearch(request2, callback); //ネットカフェ
