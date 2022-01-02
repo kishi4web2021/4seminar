@@ -12,7 +12,7 @@ function initMap() {
   };
   map = new google.maps.Map(document.getElementById("map_canvas"), opts);
   var infowindow = new google.maps.InfoWindow();
-  createData(shinjuku_data.results);
+  createData(kodaira_data.results);
   
   createmarker();
 }
