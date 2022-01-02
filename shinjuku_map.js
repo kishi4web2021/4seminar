@@ -76,10 +76,10 @@ function createMarker(i, place) {
     var date = new Date();
     var dayOfWeek = date.getDay();
     
-    var contentStr = '<a>' + place[i].name + '<br>●Wi-Fi<br>●新宿駅から' + place[i].distance + 'm<br>●本日の営業時間：(後で変更予定)' + '</a>' + '<br><a href=';
+    var contentStr = '<a>' + place_cafe[i].name + '<br>●Wi-Fi<br>●新宿駅から' + place_cafe[i].distance + 'm<br>●本日の営業時間：(後で変更予定)' + '</a>' + '<br><a href=';
 
-    if(place[i].website){
-	contentStr = contentStr + place[i].website + '>ホームページ</a> / '
+    if(place_cafe[i].website){
+	contentStr = contentStr + place_cafe[i].website + '>ホームページ</a> / '
     }
     contentStr = contentStr + '<a href=' + place[i].url + '>Google検索</a>'
     
@@ -134,7 +134,7 @@ function createmarker(){
     contentStr = contentStr + '<a href=' + place_cafe[i].url + '>Google検索</a>'
     
 
-    var infoWindow = new google.maps.InfoWindow({
+    var infoWindow_cafe = new google.maps.InfoWindow({
       content: contentStr,
     });
 
