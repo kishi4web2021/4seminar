@@ -164,19 +164,4 @@ function initMap() {
     
   var infowindow = new google.maps.InfoWindow();
   var service = new google.maps.places.PlacesService(map);
-
-  var request1 = {
-    location: latlng,
-    radius: 2000,
-    keyword: 'カラオケ館ORカラオケマックORジョイサウンドORカラオケの鉄人ORカラオケパセラORカラオケバンバンOR歌広場ORワンカラ'
-  };
-
-  var request2 = {
-    location: latlng,
-    radius: 2000,
-    keyword: '快活クラブORグランサイバーカフェバグースORマンボーORカスタマカフェORコミックバスターORネットカフェジャム'
-  };
-  
-  service.nearbySearch(request1, callback); //カラオケ
-  service.nearbySearch(request2, callback); //ネットカフェ
 }
