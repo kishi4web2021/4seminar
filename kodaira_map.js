@@ -179,3 +179,4 @@ function initMap() {
   
   service.nearbySearch(request1, callback); //カラオケ
   service.nearbySearch(request2, callback); //ネットカフェ
+}
