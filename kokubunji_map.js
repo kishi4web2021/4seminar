@@ -4,6 +4,23 @@ var currentInfoWindow = null;
 var place_cafe = [], place_famires = [], place_hamburger = [], place_karaoke = [], place_netcafe = [];
 var markers_cafe = [], markers_famires = [], markers_hamburger = [], markers_karaoke = [], markers_netcafe = []; 
 
+// 曜日の配列（日曜日は"0"
+var week={
+  "0":"日",
+  "1":"月",
+  "2":"火",
+  "3":"水",
+  "4":"木",
+  "5":"金",
+  "6":"土"
+};
+
+//曜日取得
+function fGetWeek(){
+  var d=new Date();
+  return d.getDay();
+}
+
 function createData(results) {
     for (let i=0; i<results.length; i++) {
 	x = results[i].geometry.location;
@@ -58,6 +75,16 @@ function createData(results) {
   */
 }
 
+function openingHours(weeknum, place, i){
+    var tmp={};
+    var str = '不明';
+    if(place[i].opening_hours){
+	s1 = place[i].opening_hours.weekday_text[weeknum-1];
+	str = s1.slice(4);
+    }
+    return(str)
+}
+
 function createMarker(i, place) {
   var marker = new google.maps.Marker({
     position: { lat:place[i].lat, lng:place[i].lng },
@@ -69,14 +96,10 @@ function createMarker(i, place) {
   }
 
   });
-
-    //markers.push(marker);
-
-    var date = new Date();
-    var dayOfWeek = date.getDay();
+	var openingHour = openingHours(fGetWeek(), place, i)
     
-    var contentStr = '<a>' + place[i].name + '<br>●Wi-Fi<br>●国分寺駅から' + place[i].distance + 'm<br>●本日の営業時間：(後で変更予定)' + '</a>' + '<br><a href=';
-
+    	var contentStr = '<a>' + place[i].name + '<br>●Wi-Fi<br>●新宿駅から' + place[i].distance + 'm<br>●' + week[fGetWeek()] + '曜日の営業時間：'+ openingHour + '</a>' + '<br><a href=';
+	
     if(place[i].website){
 	contentStr = contentStr + place[i].website + '>ホームページ</a> / '
     }
