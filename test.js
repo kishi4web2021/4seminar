@@ -53,6 +53,33 @@ function createmarker(){
     cafe_latlng[i] = new google.maps.LatLng(place_cafe[i].lat,place_cafe[i].lng);
     markers_cafe[i] = new google.maps.Marker({
       position: cafe_latlng[i],
+      title: place_cafe[i].name,
+      icon: {
+	      url: place_cafe[i].icon_path ,
+	      scaledSize: new google.maps.Size( 27, 40 ) ,
+      }
+    });
+    var date = new Date();
+    var dayOfWeek = date.getDay();
+    
+    var contentStr = '<a>' + place[i].name + '<br>●Wi-Fi<br>●新宿駅から' + place_cafe[i].distance + 'm<br>●本日の営業時間：(後で変更予定)' + '</a>' + '<br><a href=';
+
+    if(place_cafe[i].website){
+	    contentStr = contentStr + place_cafe[i].website + '>ホームページ</a> / '
+    }
+    contentStr = contentStr + '<a href=' + place_cafe[i].url + '>Google検索</a>'
+    
+
+    var infoWindow_cafe = new google.maps.InfoWindow({
+      content: contentStr,
+    });
+
+    google.maps.event.addListener(markers_cafe, 'click', function(){
+      if(currentInfoWindow != null) {
+        currentInfoWindow.close();
+      }
+      infoWindow.open(map, markers_cafe);
+      currentInfoWindow = infoWindow;
     });
   }
   var famires_latlng = [];
