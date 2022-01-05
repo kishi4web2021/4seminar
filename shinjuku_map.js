@@ -59,43 +59,43 @@ function createData(results) {
   */
 }
 
-function createMarker(i, place) {
-  var marker = new google.maps.Marker({
-    position: { lat:place[i].lat, lng:place[i].lng },
-    map: map,
-    title: place[i].name,
-    icon: {
-	url: place[i].icon_path ,
-	scaledSize: new google.maps.Size( 27, 40 ) ,
-  }
+//function createMarker(i, place) {
+  //var marker = new google.maps.Marker({
+    //position: { lat:place[i].lat, lng:place[i].lng },
+    //map: map,
+    //title: place[i].name,
+    //icon: {
+	//url: place[i].icon_path ,
+	//scaledSize: new google.maps.Size( 27, 40 ) ,
+  //}
 
-  });
+  //});
 
     
 
-    var date = new Date();
-    var dayOfWeek = date.getDay();
+    //var date = new Date();
+    //var dayOfWeek = date.getDay();
     
-    var contentStr = '<a>' + place_cafe[i].name + '<br>●Wi-Fi<br>●新宿駅から' + place_cafe[i].distance + 'm<br>●本日の営業時間：(後で変更予定)' + '</a>' + '<br><a href=';
+    //var contentStr = '<a>' + place_cafe[i].name + '<br>●Wi-Fi<br>●新宿駅から' + place_cafe[i].distance + 'm<br>●本日の営業時間：(後で変更予定)' + '</a>' + '<br><a href=';
 
-    if(place_cafe[i].website){
-	contentStr = contentStr + place_cafe[i].website + '>ホームページ</a> / '
-    }
-    contentStr = contentStr + '<a href=' + place[i].url + '>Google検索</a>'
+    //if(place_cafe[i].website){
+	//contentStr = contentStr + place_cafe[i].website + '>ホームページ</a> / '
+    //}
+    //contentStr = contentStr + '<a href=' + place[i].url + '>Google検索</a>'
     
 
-  var infoWindow = new google.maps.InfoWindow({
-    content: contentStr,
-  });
+  //var infoWindow = new google.maps.InfoWindow({
+    //content: contentStr,
+  //});
 
-  google.maps.event.addListener(marker, 'click', function(){
-    if(currentInfoWindow != null) {
-      currentInfoWindow.close();
-    }
-    infoWindow.open(map, marker);
-    currentInfoWindow = infoWindow;
-  });
-}
+  //google.maps.event.addListener(marker, 'click', function(){
+    //if(currentInfoWindow != null) {
+      //currentInfoWindow.close();
+    //}
+    //infoWindow.open(map, marker);
+    //currentInfoWindow = infoWindow;
+  //});
+//}
 
 function initMap() {
   var latlng = new google.maps.LatLng(35.69092, 139.7002579);
