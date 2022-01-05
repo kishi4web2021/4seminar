@@ -6,13 +6,13 @@ var markers_cafe = [], markers_famires = [], markers_hamburger = [], markers_kar
 
 // 曜日の配列
 var week={
-  "0":"月",
-  "1":"火",
-  "2":"水",
-  "3":"木",
-  "4":"金",
-  "5":"土",
-  "6":"日",
+  "0":"日",
+  "1":"月",
+  "2":"火",
+  "3":"水",
+  "4":"木",
+  "5":"金",
+  "6":"土"
 };
 
 //曜日取得
@@ -77,8 +77,9 @@ function createData(results) {
 
 function openingHours(weeknum, place, i){
     var str = '不明';
+    if(weeknum == 0){ weeknum = 7; }
     if(place[i].opening_hours.weekday_text){
-	s1 = place[i].opening_hours.weekday_text[weeknum];
+	s1 = place[i].opening_hours.weekday_text[weeknum-1];
 	str = s1.slice(4);
     }
     return(str)
