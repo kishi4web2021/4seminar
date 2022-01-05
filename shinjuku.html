@@ -6,6 +6,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" >
+    <script src="shop_list/shinjuku_data.js" type="text/javascript"></script>
+    <script src="shop_list/shinjuku_cafe.js" type="text/javascript"></script>
+    <script src="shop_list/shinjuku_famires.js" type="text/javascript"></script>
+    <script src="shop_list/shinjuku_hamburger.js" type="text/javascript"></script>
+    <script src="shop_list/shinjuku_karaoke.js" type="text/javascript"></script>
+    <script src="shop_list/shinjuku_netcafe.js" type="text/javascript"></script>
+    <script src="shinjuku_map.js" type="text/javascript"></script>
     <title>新宿</title>
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
    <script>
@@ -17,10 +24,29 @@
       });
    });
    </script>
+   <script>
+	//絞り込み
+      function loadFinished(){
+        initMap();
+        cafe();
+        famires();
+        hamburger(); 
+        karaoke();
+        netcafe();
+      }
+
+      const checkbox = document.getElementsByName("shinjuku")
+      function checkAllBox(trueOrFalse) {
+        for(i = 0; i < checkbox.length; i++) {
+          checkbox[i].checked = trueOrFalse
+        }
+      }
+      
+    </script>
   </head>
   
-  <body>
-	  <header>
+  <body onload="loadFinished()">
+	<header>
       <div class="logo">
         <a href="index.html">mume</a>
       </div>
@@ -46,8 +72,6 @@
       </div>
     </header>
 	  <!-- ここからはじまり -->
-    <script type="text/javascript" src="shop_list/shinjuku_data.js"></script>
-    <script type="text/javascript" src="./shinjuku_map.js"></script>
     <script>
       function loadFinished(){
         cafe();
@@ -88,12 +112,12 @@
       <p>個室の有無</p>
       <input id="sample46" value="1" name="shinjuku" type="checkbox" onclick="koshitsu5();" checked><label for="sample46" class="checkbox01">個室あり</label>
       <input id="sample47" value="1" name="shinjuku" type="checkbox" onclick="koshitsu6();" checked><label for="sample47" class="checkbox01">個室なし</label>
-      <p>お店の種類</p>
-      <input id="sample48" value="1" name="shinjuku" type="checkbox" checked><label for="sample48" class="checkbox01">カフェ</label>
-      <input id="sample49" value="1" name="shinjuku" type="checkbox" checked><label for="sample49" class="checkbox01">ファミレス</label>
-      <input id="sample55" value="1" name="shinjuku" type="checkbox" checked><label for="sample55" class="checkbox01">ハンバーガー</label>
-      <input id="sample51" value="1" name="shinjuku" type="checkbox" checked><label for="sample51" class="checkbox01">カラオケ</label>
-      <input id="sample50" value="1" name="shinjuku" type="checkbox" checked><label for="sample50" class="checkbox01">ネットカフェ</label>
+　　　　　　　　　　　　<p>お店の種類</p>      
+      <input id="cafebox" name="shinjuku" type="checkbox" checked><label for="cafe">カフェ</label>
+    　　　　<input id="famiresbox" name="shinjuku" type="checkbox" checked><label for="famires">ファミレス</label>
+    　　　　<input id="hamburgerbox" name="shinjuku" type="checkbox" checked><label for="hamburger">ハンバーガー</label>
+    　　　　<input id="karaokebox" name="shinjuku" type="checkbox" checked><label for="karaoke">カラオケ</label>
+    　　　　<input id="netcafebox" name="shinjuku" type="checkbox" checked><label for="netcafe">ネットカフェ</label>
       <p>価格帯</p>
       <input id="sample52" value="1" name="shinjuku" type="checkbox" onclick="level2s();" checked><label for="sample52" class="checkbox01">普通</label>
       <input id="sample53" value="1" name="shinjuku" type="checkbox" onclick="level3s();" checked><label for="sample53" class="checkbox01">少し高め</label>
@@ -105,23 +129,25 @@
       <br>
     </div>
     <script>
-        const checkbox3 = document.getElementsByName("shinjuku")
-
-        function checkAllBox(trueOrFalse) {
-          for(i = 0; i < checkbox3.length; i++) {
-            checkbox3[i].checked = trueOrFalse
-          }
+      function clickEvent(){
+        deletemarkersall();
+        if(cafebox.checked){
+          cafe();
         }
-        function clickEvent(){
-          
-          console.log("ボタン押した");
-          //deleteMakers(markers_cafe);
-          markers_cafe = [];
-          markers_cafe.setMap(map);
-          
-         
+        if(famiresbox.checked){
+          famires();
         }
-     </script>
+        if(hamburgerbox.checked){
+          hamburger();
+        }
+        if(karaokebox.checked){
+          karaoke();
+        }
+        if(netcafebox.checked){
+          netcafe();
+        }
+      }
+    </script>
 	<!-- ここまで終わり -->
   </body>
 </html>
