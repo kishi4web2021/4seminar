@@ -1,4 +1,5 @@
 var map;
+var currentInfoWindow = null;
 
 var place_cafe = [], place_famires = [], place_hamburger = [], place_karaoke = [], place_netcafe = [];
 var markers_cafe = [], markers_famires = [], markers_hamburger = [], markers_karaoke = [], markers_netcafe = [];
@@ -62,7 +63,7 @@ function createmarker(){
     var date = new Date();
     var dayOfWeek = date.getDay();
     
-    var contentStr = '<a>' + place[i].name + '<br>●Wi-Fi<br>●新宿駅から' + place_cafe[i].distance + 'm<br>●本日の営業時間：(後で変更予定)' + '</a>' + '<br><a href=';
+    var contentStr = '<a>' + place_cafe[i].name + '<br>●Wi-Fi<br>●新宿駅から' + place_cafe[i].distance + 'm<br>●本日の営業時間：(後で変更予定)' + '</a>' + '<br><a href=';
 
     if(place_cafe[i].website){
 	    contentStr = contentStr + place_cafe[i].website + '>ホームページ</a> / '
