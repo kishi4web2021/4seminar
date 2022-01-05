@@ -4,7 +4,7 @@ var currentInfoWindow = null;
 var place_cafe = [], place_famires = [], place_hamburger = [], place_karaoke = [], place_netcafe = [];
 var markers_cafe = [], markers_famires = [], markers_hamburger = [], markers_karaoke = [], markers_netcafe = []; 
 
-// 曜日の配列（日曜日は"0"
+// 曜日の配列
 var week={
   "0":"月",
   "1":"火",
