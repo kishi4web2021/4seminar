@@ -16,7 +16,6 @@ function initMap() {
   createData(shinjuku_data.results);
   
   createmarker();
-  createmarkers(place_famires,markers_famires);
 }
 
 function createData(results) {
