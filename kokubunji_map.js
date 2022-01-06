@@ -149,7 +149,7 @@ function netcafe() {
   }
 }
 
-function setcafe(){
+function setcafe(map){
   for(var i=0; i<markers_cafe.length; i++){
     markers_cafe[i].setMap(map);
   }
@@ -207,6 +207,7 @@ function initMap() {
   });
   createData(kokubunji_data.results);
   cafe();
+  setcafe(map);
   famires();
   hamburger();
   karaoke();
