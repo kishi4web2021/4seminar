@@ -183,6 +183,7 @@ function setnetcafe(){
 }
 
 function deletemarkersall(){
+	console.log("delma1");
   for(var i=0; i<markers_cafe.length; i++){
     markers_cafe[i].setVisible(false);
   }
@@ -198,6 +199,8 @@ function deletemarkersall(){
   for(var m=0; m<markers_netcafe.length; m++){
     markers_netcafe[m].setVisible(false);
   }
+	console.log("delma2");
+	
 }
 
 function initMap() {
