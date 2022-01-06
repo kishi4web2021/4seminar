@@ -11,7 +11,7 @@ function initMap() {
     center: latlng,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
-  map = new google.maps.Map(document.getElementById("map_canvas"), opts);
+  map = new google.maps.Map(document.getElementById("map"), opts);
   var infowindow = new google.maps.InfoWindow();
   createData(kodaira_data.results);
   
