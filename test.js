@@ -16,6 +16,7 @@ function initMap() {
   createData(shinjuku_data.results);
   
   createmarker();
+  createmarkers(place_famires,markers_famires);
 }
 
 function createData(results) {
@@ -48,8 +49,8 @@ function createData(results) {
   } 
 }
 
-function careatemakers(place,latlng,markers){
-	var cafe_latlng = [];
+function careatemakers(place,markers){
+	var latlng = [];
   	for(var i=0; i<place.length; i++){
     	latlng[i] = new google.maps.LatLng(place[i].lat,place[i].lng);
     	markers[i] = new google.maps.Marker({
