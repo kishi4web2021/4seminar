@@ -4,6 +4,7 @@ var place_cafe = [], place_famires = [], place_hamburger = [], place_karaoke = [
 var markers_cafe = [], markers_famires = [], markers_hamburger = [], markers_karaoke = [], markers_netcafe = [];
 
 function initMap() {
+  var target = document.getElementById('map');  
   var latlng = new google.maps.LatLng(35.7217636, 139.4667473);
   var opts = {
     zoom: 14,
@@ -153,7 +154,7 @@ function deletemarkersall(){
   }
 }
 
-//
+/*
 function initMap() {
   var target = document.getElementById('map');  
   var latlng = {lat: 35.7217636, lng: 139.4667473};  //小平キャンパスの緯度経度
@@ -164,4 +165,4 @@ function initMap() {
     
   var infowindow = new google.maps.InfoWindow();
   var service = new google.maps.places.PlacesService(map);
-}
+} */
