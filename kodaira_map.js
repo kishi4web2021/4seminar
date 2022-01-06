@@ -30,19 +30,24 @@ function createData(results) {
 
     switch(results[i].shop) {
       case "cafe":
-        place_cafe.push(x);
+	      x["icon_path"] = './img/icon1.png'
+	      place_cafe.push(x);
         break;
       case "famires":
-        place_famires.push(x);
+	      x["icon_path"] = './img/icon2.png'
+	      place_famires.push(x);
         break;
       case "hamburger":
-        place_hamburger.push(x);
+	      x["icon_path"] = './img/icon3.png'
+	      place_hamburger.push(x);
         break;
       case "karaoke":
-        place_karaoke.push(x);
+	      x["icon_path"] = './img/icon4.png'
+	      place_karaoke.push(x);
         break;
       case "netcafe":
-        place_netcafe.push(x);
+	      x["icon_path"] = './img/icon5.png'
+	      place_netcafe.push(x);
         break;
     }
   } 
