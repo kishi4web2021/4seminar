@@ -50,11 +50,11 @@
     <script type="text/javascript" src="./kokubunji_map.js"></script>
     <script>
       function loadFinished(){
-        cafe();
-        famires();
-        hamburger(); 
-        karaoke();
-        netcafe();
+        setcafe();
+        setfamires();
+        sethamburger(); 
+        setkaraoke();
+        setnetcafe();
       }
       window.onload = loadFinished;
     </script>
@@ -115,11 +115,8 @@
         function clickEvent(){
           
           console.log("ボタン押した");
-          //deleteMakers(markers_cafe);
-          markers_cafe = [];
-          markers_cafe.setMap(map);
-          
-         
+          deleteMakersAll(markers_cafe);
+      
         }
      </script>
 	<!-- ここまで終わり -->
