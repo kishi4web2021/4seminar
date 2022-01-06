@@ -186,6 +186,7 @@ function setnetcafe(){
 
 function deletemarkersall(){
 	console.log("delma1");
+	console.log(makers_cafe.length);
   for(var i=0; i<markers_cafe.length; i++){
     markers_cafe[i].setVisible(false);
   }
