@@ -52,15 +52,16 @@ function createData(results) {
 function careatemakers(place,markers){
 	var latlng = [];
   	for(var i=0; i<place.length; i++){
-    	latlng[i] = new google.maps.LatLng(place[i].lat,place[i].lng);
-    	markers[i] = new google.maps.Marker({
-     		position: latlng[i],
-      		title: place[i].name,
-      		icon: {
-	      		url: place[i].icon_path ,
-	      		scaledSize: new google.maps.Size( 27, 40 ) ,
-      		}
-    	});
+    		latlng[i] = new google.maps.LatLng(place[i].lat,place[i].lng);
+    		markers[i] = new google.maps.Marker({
+     			position: latlng[i],
+      			title: place[i].name,
+      			icon: {
+	      			url: place[i].icon_path ,
+	      			scaledSize: new google.maps.Size( 27, 40 ) ,
+      			}
+    		});
+	}
 }
 
 function createmarker(){
