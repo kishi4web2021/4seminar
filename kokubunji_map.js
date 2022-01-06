@@ -198,6 +198,7 @@ function deletemarkersall(){
 }
 
 function initMap() {
+  console.log("xx3");
   var target = document.getElementById('map');  
   var latlng = {lat: 35.7002283, lng: 139.4805254};  //国分寺駅の緯度経度
   map = new google.maps.Map(document.getElementById('map'), {
@@ -210,4 +211,5 @@ function initMap() {
   hamburger();
   karaoke();
   netcafe();
+  console.log("xx4");
 }
