@@ -151,49 +151,52 @@ function netcafe() {
 
 function setcafe(map){
   for(var i=0; i<markers_cafe.length; i++){
-    markers_cafe[i].setMap(map);
+    markers_cafe[i].setVisible(true);
+
   }
 }
 
 function setfamires(){
   for(var i=0; i<markers_famires.length; i++){
-    markers_famires[i].setMap(map);
+    markers_famires[i].setVisible(true);
+
   }
 }
 
 function sethamburger(){
   for(var i=0; i<markers_hamburger.length; i++){
-    markers_hamburger[i].setMap(map);
+    markers_hamburger[i].setVisible(true);
+
   }
 }
 
 function setkaraoke(){
   for(var i=0; i<markers_karaoke.length; i++){
-    markers_karaoke[i].setMap(map);
+    markers_netcafe[i].setVisible(true);
   }
 }
 
 function setnetcafe(){
   for(var i=0; i<markers_netcafe.length; i++){
-    markers_netcafe[i].setMap(map);
+    markers_netcafe[i].setVisible(true);
   }
 }
 
 function deletemarkersall(){
   for(var i=0; i<markers_cafe.length; i++){
-    markers_cafe[i].setMap(null);
+    markers_cafe[i].setVisible(false);
   }
   for(var j=0; j<markers_famires.length; j++){
-    markers_famires[j].setMap(null);
+    markers_famires[j].setVisible(false);
   }
   for(var k=0; k<markers_hamburger.length; k++){
-    markers_hamburger[k].setMap(null);
+    markers_hamburger[k].setVisible(false);
   }
   for(var l=0; l<markers_karaoke.length; l++){
-    markers_karaoke[l].setMap(null);
+    markers_karaoke[l].setVisible(false);
   }
   for(var m=0; m<markers_netcafe.length; m++){
-    markers_netcafe[m].setMap(null);
+    markers_netcafe[m].setVisible(false);
   }
 }
 
@@ -207,7 +210,7 @@ function initMap() {
   });
   createData(kokubunji_data.results);
   cafe();
-  setcafe(map);
+  setcafe();
   famires();
   hamburger();
   karaoke();
