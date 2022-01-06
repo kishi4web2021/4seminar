@@ -205,4 +205,9 @@ function initMap() {
     zoom: 16
   });
   createData(kokubunji_data.results);
+  cafe();
+  famires();
+  hamburger();
+  karaoke();
+  netcafe();
 }
