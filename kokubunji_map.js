@@ -149,6 +149,54 @@ function netcafe() {
   }
 }
 
+function setcafe(){
+  for(var i=0; i<markers_cafe.length; i++){
+    markers_cafe[i].setMap(map);
+  }
+}
+
+function setfamires(){
+  for(var i=0; i<markers_famires.length; i++){
+    markers_famires[i].setMap(map);
+  }
+}
+
+function sethamburger(){
+  for(var i=0; i<markers_hamburger.length; i++){
+    markers_hamburger[i].setMap(map);
+  }
+}
+
+function setkaraoke(){
+  for(var i=0; i<markers_karaoke.length; i++){
+    markers_karaoke[i].setMap(map);
+  }
+}
+
+function setnetcafe(){
+  for(var i=0; i<markers_netcafe.length; i++){
+    markers_netcafe[i].setMap(map);
+  }
+}
+
+function deletemarkersall(){
+  for(var i=0; i<markers_cafe.length; i++){
+    markers_cafe[i].setMap(null);
+  }
+  for(var j=0; j<markers_famires.length; j++){
+    markers_famires[j].setMap(null);
+  }
+  for(var k=0; k<markers_hamburger.length; k++){
+    markers_hamburger[k].setMap(null);
+  }
+  for(var l=0; l<markers_karaoke.length; l++){
+    markers_karaoke[l].setMap(null);
+  }
+  for(var m=0; m<markers_netcafe.length; m++){
+    markers_netcafe[m].setMap(null);
+  }
+}
+
 function initMap() {
   var target = document.getElementById('map');  
   var latlng = {lat: 35.7002283, lng: 139.4805254};  //国分寺駅の緯度経度
