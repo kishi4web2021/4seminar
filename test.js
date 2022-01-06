@@ -49,32 +49,17 @@ function createData(results) {
   } 
 }
 
-function careatemakers(place,markers){
-	var latlng = [];
-  	for(var i=0; i<place.length; i++){
-    		latlng[i] = new google.maps.LatLng(place[i].lat,place[i].lng);
-    		markers[i] = new google.maps.Marker({
-     			position: latlng[i],
-      			title: place[i].name,
-      			icon: {
-	      			url: place[i].icon_path ,
-	      			scaledSize: new google.maps.Size( 27, 40 ) ,
-      			}
-    		});
-	}
-}
-
 function createmarker(){
   var cafe_latlng = [];
   for(var i=0; i<place_cafe.length; i++){
     cafe_latlng[i] = new google.maps.LatLng(place_cafe[i].lat,place_cafe[i].lng);
     markers_cafe[i] = new google.maps.Marker({
       position: cafe_latlng[i],
-      //title: place_cafe[i].name,
-      //icon: {
-	      //url: place_cafe[i].icon_path ,
-	      //scaledSize: new google.maps.Size( 27, 40 ) ,
-      //}
+      title: place_cafe[i].name,
+      icon: {
+	      url: place_cafe[i].icon_path ,
+	      scaledSize: new google.maps.Size( 27, 40 ) ,
+      }
     });
     //var date = new Date();
     //var dayOfWeek = date.getDay();
@@ -90,22 +75,14 @@ function createmarker(){
     //var infoWindow_cafe = new google.maps.InfoWindow({
       //content: contentStr,
     //});
-
-    //google.maps.event.addListener(markers_cafe, 'click', function(){
-      //if(currentInfoWindow != null) {
-        //currentInfoWindow.close();
-      //}
-      //infoWindow.open(map, markers_cafe);
-      //currentInfoWindow = infoWindow;
-    //});
   }
-  //var famires_latlng = [];
-  //for(var j=0; j<place_famires.length; j++){
-    //famires_latlng[j] = new google.maps.LatLng(place_famires[j].lat,place_famires[j].lng);
-    //markers_famires[j] = new google.maps.Marker({
-      //position: famires_latlng[j],
-    //});
-  //}
+  var famires_latlng = [];
+  for(var j=0; j<place_famires.length; j++){
+    famires_latlng[j] = new google.maps.LatLng(place_famires[j].lat,place_famires[j].lng);
+    markers_famires[j] = new google.maps.Marker({
+      position: famires_latlng[j],
+    });
+  }
   var hamburger_latlng = [];
   for(var k=0; k<place_hamburger.length; k++){
     hamburger_latlng[k] = new google.maps.LatLng(place_hamburger[k].lat,place_hamburger[k].lng);
