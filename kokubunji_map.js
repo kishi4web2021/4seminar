@@ -119,43 +119,10 @@ function createMarker(i, place) {
   });
 }
 
-// Sets the map on all markers in the array.
-function setMapOnAll(map,markers){
-  for (let i = 0; i < markers.length; i++) {
-    markers[i].setMap(map);
-  }
-}
-
-// Removes the markers from the map, but keeps them in the array.
-function hideMarkers() {
-  setMapOnAll(null,null);
-}
-
-// Shows any markers currently in the array.
-function showMarkers() {
-  setMapOnAll(map);
-}
-
-// Deletes all markers in the array by removing references to them.
-function deleteMarkers(markers) {
-  hideMarkers();
-  markers = [];
-}
-
 function cafe() {
-  //if(n=1){
   for (var i=0; i<place_cafe.length; i++) {
       createMarker(i, place_cafe);
   }
-  //setMapOnAll(map,markers_cafe);
-  
-    //showMarkers();
-  //}else{
-    //for (let i = 0; i < markers_cafe.length; i++) {
-      //markers_cafe[i].setMap(null);
-    //}
-    //markers_cafe = [];
-  //}
 }
 
 function famires() {
@@ -190,9 +157,4 @@ function initMap() {
     zoom: 16
   });
   createData(kokubunji_data.results);
-  //cafe();
-  //famires();
-  //hamburger(); 
-  //karaoke();
-  //netcafe();
 }
