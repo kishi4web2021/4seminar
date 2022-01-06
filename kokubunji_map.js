@@ -117,11 +117,13 @@ function createMarker(i, place) {
     infoWindow.open(map, marker);
     currentInfoWindow = infoWindow;
   });
+	return(marker);
 }
 
 function cafe() {
   for (var i=0; i<place_cafe.length; i++) {
-      createMarker(i, place_cafe);
+      markers_cafe.push(createMarker(i, place_cafe));
+	 
   }
 }
 
